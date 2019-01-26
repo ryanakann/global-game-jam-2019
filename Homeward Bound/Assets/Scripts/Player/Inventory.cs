@@ -14,6 +14,7 @@ public class Inventory : MonoBehaviour
 
     public EquipDel EquipEvent;
 
+
     private void Awake()
     {
         if (!instance) {
