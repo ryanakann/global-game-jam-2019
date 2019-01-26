@@ -8,7 +8,7 @@ public class PlayerInput : MonoBehaviour
 	bool crouch;
     float hraw, vraw;
     Camera cam;
-    public static bool allowMovement;
+    public static bool allowMovement = true;
 
     private void Start()
     {
