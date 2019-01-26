@@ -8,7 +8,7 @@ public class PlayerBody : MonoBehaviour
     Vector3 smooth_speed;
     float rot_speed = 500f, smooth_time = 0.1f;
 
-    public float speed;
+    public float speed = 5f;
 
     private void Start()
     {
