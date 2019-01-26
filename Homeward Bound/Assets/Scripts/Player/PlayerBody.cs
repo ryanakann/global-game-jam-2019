@@ -6,10 +6,10 @@ public class PlayerBody : MonoBehaviour
 {
     Rigidbody rb;
     Vector3 smooth_speed;
-    float rot_speed = 500f, smooth_time = 0.2f;
+    float smooth_time = 0.05f;
     Item equipped_item;
 
-    public float speed = 5f;
+    [HideInInspector]public float speed = 5f;
 
 	Vector3 dirGizmo;
 
