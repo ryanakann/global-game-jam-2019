@@ -18,10 +18,14 @@ public class PlayerInput : MonoBehaviour
     {
         v = Input.GetAxis("Vertical");
         h = Input.GetAxis("Horizontal");
+
         forward = Vector3.ProjectOnPlane(cam.transform.forward, Vector3.up);
         dir = (v * forward + h * cam.transform.right);
         dir = (dir.magnitude > 1f) ? dir.normalized : dir;
-        body.Move(dir);
+        if (Input.GetAxisRaw("Vertical") != 0f || Input.GetAxisRaw("Horizontal") != 0f)
+        {
+            body.Move(dir);
+        }
 
         if (Input.GetAxis("Use") > 0f)
         {
