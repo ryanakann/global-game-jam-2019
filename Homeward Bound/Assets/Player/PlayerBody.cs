@@ -13,6 +13,7 @@ public class PlayerBody : MonoBehaviour
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
+        Inventory.instance.EquipEvent += Equip;
     }
 
     public void FixedUpdate()
@@ -37,6 +38,16 @@ public class PlayerBody : MonoBehaviour
     }
 
     public void Interact()
+    {
+
+    }
+
+    public void OpenInventory()
+    {
+        Inventory.instance.Open();
+    }
+
+    public void Equip(InventoryItem i_item)
     {
 
     }
