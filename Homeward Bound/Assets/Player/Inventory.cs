@@ -38,8 +38,7 @@ public class Inventory : MonoBehaviour
 
     public void Equip(InventoryItem item)
     {
-        if (EquipEvent == null)
-            EquipEvent(item);
+        EquipEvent?.Invoke(item);
     }
 
     public void Open()

@@ -7,6 +7,7 @@ public class PlayerBody : MonoBehaviour
     Rigidbody rb;
     Vector3 smooth_speed;
     float rot_speed = 500f, smooth_time = 0.2f;
+    Item equipped_item;
 
     public float speed = 5f;
 
@@ -48,6 +49,7 @@ public class PlayerBody : MonoBehaviour
 
     public void Equip(InventoryItem i_item)
     {
-
+        //spawn i_item.obj in hand, unless the i_item.id == ItemID.hand
+        //equipped_item = i_item.obj.GetComponent<Item>();
     }
 }
