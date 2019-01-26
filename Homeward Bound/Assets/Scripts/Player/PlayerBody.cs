@@ -9,7 +9,7 @@ public class PlayerBody : MonoBehaviour
     float smooth_time = 0.05f;
     Item equipped_item;
 
-    [HideInInspector]public float speed = 5f;
+    [HideInInspector]public float speed = 2f;
 
 	Vector3 dirGizmo;
 
@@ -24,7 +24,7 @@ public class PlayerBody : MonoBehaviour
 		dirGizmo = dir;
 		if (rb.velocity != Vector3.zero) {
 			transform.forward = Vector3.SmoothDamp(transform.forward,
-			dir,
+			rb.velocity,
 			ref smooth_speed, smooth_time);
 			//transform.forward = Vector3.Lerp(transform.forward, dir, 100f * Time.deltaTime);
 		}
