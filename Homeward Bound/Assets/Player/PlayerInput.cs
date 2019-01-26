@@ -4,8 +4,9 @@ using UnityEngine;
 public class PlayerInput : MonoBehaviour
 {
     PlayerBody body;
-    Vector3 forward, dir;
-    float h, v;
+    Vector3 forward, right, dir;
+	bool crouch;
+    float hraw, vraw;
     Camera cam;
 
     private void Start()
@@ -14,17 +15,20 @@ public class PlayerInput : MonoBehaviour
         body = GetComponent<PlayerBody>();
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
-        v = Input.GetAxis("Vertical");
-        h = Input.GetAxis("Horizontal");
+        vraw = Input.GetAxisRaw("Vertical");
+        hraw = Input.GetAxisRaw("Horizontal");
+
+		crouch = Input.GetAxisRaw("Fire3") > 0f;
 
         forward = Vector3.ProjectOnPlane(cam.transform.forward, Vector3.up);
-        dir = (v * forward + h * cam.transform.right);
+		right = Vector3.Cross(Vector3.up, forward);
+        dir = (vraw * forward + hraw * right);
         dir = (dir.magnitude > 1f) ? dir.normalized : dir;
-        if (Input.GetAxisRaw("Vertical") != 0f || Input.GetAxisRaw("Horizontal") != 0f)
+        if (Input.GetAxisRaw("Vertical") != 0f || Input.GetAxisRaw("Horizontal") != 0f || crouch)
         {
-            body.Move(dir);
+            body.Move(dir, crouch);
         }
 
         if (Input.GetButtonDown("Use"))
@@ -42,4 +46,9 @@ public class PlayerInput : MonoBehaviour
             body.OpenInventory();
         }
     }
+
+	private void OnDrawGizmos () {
+		Gizmos.color = Color.black;
+		Gizmos.DrawRay(transform.position, new Vector3(Input.GetAxis("Horizontal"), 0f, Input.GetAxis("Vertical")) * 5f);
+	}
 }
