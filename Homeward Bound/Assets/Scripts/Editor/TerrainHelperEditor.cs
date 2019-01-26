@@ -14,5 +14,9 @@ public class TerrainHelperEditor : Editor {
 		if (GUILayout.Button("Flatten Terrain")) {
 			targ.Flatten();
 		}
+
+		if (GUILayout.Button("Raise Terrain")) {
+			targ.Raise();
+		}
 	}
 }
