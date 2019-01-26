@@ -35,6 +35,11 @@ ModelImporter:
     100058: Shirt
     100060: Spine
     100062: Visor
+    100064: Head_end_end
+    100066: Left knee_end_end
+    100068: Mixamorig:LeftHandIndex1_end_end
+    100070: Mixamorig:RightHandIndex1_end_end
+    100072: Right knee_end_end
     400000: Armature
     400002: Base
     400004: Chest
@@ -67,6 +72,11 @@ ModelImporter:
     400058: Shirt
     400060: Spine
     400062: Visor
+    400064: Head_end_end
+    400066: Left knee_end_end
+    400068: Mixamorig:LeftHandIndex1_end_end
+    400070: Mixamorig:RightHandIndex1_end_end
+    400072: Right knee_end_end
     2100000: Eyes
     2100002: HeatherSkinMat
     2100004: HeatherShirtMat

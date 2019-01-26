@@ -5,28 +5,15 @@ using UnityEngine;
 public class Item : MonoBehaviour
 {
     public ItemID id;
-    public InventoryItem invItem;
-    bool equipped;
-
-    
-
-    private void OnCollisionEnter(Collision collision)
+    // Start is called before the first frame update
+    void Start()
     {
-        if(!equipped && collision.gameObject.CompareTag("Player"))
-        {
-            PickUp(collision.gameObject.GetComponent<Inventory>());
-        }
+        
     }
 
-    public void PickUp(Inventory inventory)
+    // Update is called once per frame
+    void Update()
     {
-        inventory.AddItem(invItem);
-
-        Destroy(gameObject);
-    }
-
-    public bool IsEquipped()
-    {
-        return equipped;
+        
     }
 }
