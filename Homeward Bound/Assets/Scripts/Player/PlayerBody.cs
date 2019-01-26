@@ -15,6 +15,8 @@ public class PlayerBody : MonoBehaviour
 
     [HideInInspector]public float speed = 20f;
 
+    public bool moving;
+
 	Vector3 dirGizmo;
 
     private void Start()
@@ -41,6 +43,8 @@ public class PlayerBody : MonoBehaviour
 
             rb.velocity = new Vector3(dir.x * speed * (crouch ? 0.5f : 1), rb.velocity.y, dir.z * speed * (crouch ? 0.5f : 1));
         }
+
+        moving = move;
 
         anim.SetFloat(speedHash, rb.velocity.magnitude / speed * (crouch ? 0.5f : 1));
         anim.SetBool(crouchHash, crouch);
