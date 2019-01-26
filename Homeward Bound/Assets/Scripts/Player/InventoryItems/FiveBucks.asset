@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8343711ebc685774fad1dabc63df62dc, type: 3}
-  m_Name: Cat
+  m_Name: FiveBucks
   m_EditorClassIdentifier: 
-  sprite: {fileID: 21300000, guid: 8d3c80dd0c2904cdbb745cf481348a76, type: 3}
-  obj: {fileID: 0}
-  id: 7
-  header: Cat
-  body: meow lol
+  sprite: {fileID: 0}
+  obj: {fileID: 196746172646600284, guid: 69a91bad28322764280f5389c0a300d2, type: 3}
+  id: 3
+  header: $5
+  body: It's a big ole lincoln. Makes you feel important.
