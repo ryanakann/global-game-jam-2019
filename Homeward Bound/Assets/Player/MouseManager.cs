@@ -5,11 +5,9 @@ using UnityEngine;
 public class MouseManager : MonoBehaviour
 {
     public static MouseManager instance;
-
-    public bool over_equip;
     public EquipFrame equip_frame;
 
-    private void Start()
+    private void Awake()
     {
         if (!instance)
         {

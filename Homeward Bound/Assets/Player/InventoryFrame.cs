@@ -3,93 +3,79 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.EventSystems;
 
-public class InventoryFrame : MonoBehaviour
+public class InventoryFrame : MonoBehaviour, IPointerClickHandler, IPointerEnterHandler, IPointerExitHandler
 {
     public InventoryItem item;
     Image icon;
-    bool clicked, infod;
     float max_info_timer, info_timer = 0.5f;
-    Vector3 position;
 
     public GameObject info;
     public TextMeshProUGUI header, body;
-    private string header_text, body_text;
+
+    bool infod, mouse_over;
 
     // Start is called before the first frame update
     void Start()
     {
         icon = GetComponent<Image>();
-        position = transform.position;
+        if (item)
+            AddItem(item);
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (clicked)
-            transform.position = Input.mousePosition;
+        if (mouse_over && !infod)
+        {
+            if (info_timer > 0f)
+            {
+                info_timer -= Time.deltaTime;
+            }
+            else if (info_timer <= 0f)
+            {
+                infod = true;
+                info.SetActive(true);
+            }
+        }
     }
 
     public void AddItem(InventoryItem i_item)
     {
         item = i_item;
         icon.sprite = i_item.sprite;
-        header.text = header_text;
-        body.text = body_text;
+        header.text = i_item.header;
+        body.text = i_item.body;
     }
 
-    public void OnMouseDown()
+    public void OnPointerClick(PointerEventData pe)
     {
         if (!item)
             return;
-        if (MouseManager.instance.over_equip)
-        {
-            Inventory.instance.equip_frame.Equip(item);
-        }
-        else if (MouseManager.instance.equip_frame.id == item.id)
-        {
-            Inventory.instance.equip_frame.Unequip();
-        }
-        transform.position = position;
-        clicked = !clicked;
-        if (!clicked)
-        {
-            DeInfo();
-            icon.raycastTarget = true;
-        }
-        else
-            icon.raycastTarget = false;
+        Inventory.instance.equip_frame.Equip(item);
     }
 
-    public void OnMouseOver()
+    public void OnPointerEnter(PointerEventData pe)
     {
         if (!item)
             return;
-        if (!clicked && !infod && info_timer > 0f)
-        {
-            info_timer -= Time.deltaTime;
-        }
-        else if (info_timer <= 0f)
-        {
-            info_timer = max_info_timer;
-            infod = true;
-            info.SetActive(true);
-        }
+        mouse_over = true;
+        info_timer = max_info_timer;
     }
 
-    public void OnMouseExit()
+    public void OnPointerExit(PointerEventData pe)
     {
         if (!item)
             return;
-        if (infod)
-            DeInfo();
+        DeInfo();
     }
 
     void DeInfo()
     {
-        info_timer = max_info_timer;
         infod = false;
         info.SetActive(false);
+        mouse_over = false;
     }
 
     private void OnDisable()
@@ -97,7 +83,5 @@ public class InventoryFrame : MonoBehaviour
         if (!item)
             return;
         DeInfo();
-        clicked = false;
-        transform.position = position;
     }
 }

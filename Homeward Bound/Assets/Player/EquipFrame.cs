@@ -2,8 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
-public class EquipFrame : MonoBehaviour
+public class EquipFrame : MonoBehaviour, IPointerClickHandler
 {
     public InventoryItem default_item;
     Image icon;
@@ -14,14 +15,9 @@ public class EquipFrame : MonoBehaviour
         icon = GetComponent<Image>();
     }
 
-    private void OnMouseEnter()
+    public void OnPointerClick(PointerEventData pe)
     {
-        MouseManager.instance.over_equip = true;
-    }
-
-    private void OnMouseExit()
-    {
-        MouseManager.instance.over_equip = false;
+        Unequip();
     }
 
     public void Equip(InventoryItem item)

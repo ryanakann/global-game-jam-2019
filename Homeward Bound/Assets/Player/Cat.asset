@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8343711ebc685774fad1dabc63df62dc, type: 3}
-  m_Name: Hand
+  m_Name: Cat
   m_EditorClassIdentifier: 
-  sprite: {fileID: 21300000, guid: ea8f56c43254d41728f5ac4e8299b6c9, type: 3}
+  sprite: {fileID: 21300000, guid: 8d3c80dd0c2904cdbb745cf481348a76, type: 3}
   obj: {fileID: 0}
-  id: 0
-  header: Hand
-  body: simbly ebig
+  id: 7
+  header: Cat
+  body: meow lol

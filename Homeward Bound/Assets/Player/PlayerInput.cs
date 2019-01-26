@@ -15,6 +15,24 @@ public class PlayerInput : MonoBehaviour
         body = GetComponent<PlayerBody>();
     }
 
+    private void Update()
+    {
+        if (Input.GetButtonDown("Use"))
+        {
+            body.Use();
+        }
+
+        if (Input.GetButtonDown("Interact"))
+        {
+            body.Interact();
+        }
+
+        if (Input.GetButtonDown("Inventory"))
+        {
+            body.OpenInventory();
+        }
+    }
+
     private void FixedUpdate()
     {
         vraw = Input.GetAxisRaw("Vertical");
@@ -29,21 +47,6 @@ public class PlayerInput : MonoBehaviour
         if (Input.GetAxisRaw("Vertical") != 0f || Input.GetAxisRaw("Horizontal") != 0f || crouch)
         {
             body.Move(dir, crouch);
-        }
-
-        if (Input.GetButtonDown("Use"))
-        {
-            body.Use();
-        }
-
-        if (Input.GetButtonDown("Interact"))
-        {
-            body.Interact();
-        }
-
-        if (Input.GetButtonDown("Inventory"))
-        {
-            body.OpenInventory();
         }
     }
 
