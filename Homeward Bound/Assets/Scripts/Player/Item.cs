@@ -6,7 +6,7 @@ public class Item : MonoBehaviour
 {
     public ItemID id;
     public InventoryItem invItem;
-    bool equipped;
+    [HideInInspector] public bool equipped;
 
 
 
@@ -14,19 +14,19 @@ public class Item : MonoBehaviour
     {
         if (!equipped && collision.gameObject.CompareTag("Player"))
         {
-            PickUp(collision.gameObject.GetComponent<Inventory>());
+            PickUp();
         }
     }
 
-    public void PickUp(Inventory inventory)
+    public void PickUp()
     {
-        inventory.AddItem(invItem);
+        Inventory.instance.AddItem(invItem);
 
         Destroy(gameObject);
     }
 
-    public bool IsEquipped()
+    public virtual void Use()
     {
-        return equipped; 
+        
     }
 }
