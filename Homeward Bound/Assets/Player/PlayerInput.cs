@@ -31,14 +31,19 @@ public class PlayerInput : MonoBehaviour
             body.Move(dir, crouch);
         }
 
-        if (Input.GetAxis("Use") > 0f)
+        if (Input.GetButtonDown("Use"))
         {
             body.Use();
         }
 
-        if (Input.GetAxis("Interact") > 0f)
+        if (Input.GetButtonDown("Interact"))
         {
             body.Interact();
+        }
+
+        if (Input.GetButtonDown("Inventory"))
+        {
+            body.OpenInventory();
         }
     }
 
