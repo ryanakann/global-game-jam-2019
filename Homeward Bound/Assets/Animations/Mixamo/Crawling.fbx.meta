@@ -75,7 +75,7 @@ ModelImporter:
     9500000: //RootNode
   externalObjects: {}
   materials:
-    importMaterials: 0
+    importMaterials: 1
     materialName: 0
     materialSearch: 1
     materialLocation: 1
@@ -84,7 +84,7 @@ ModelImporter:
     bakeSimulation: 0
     resampleCurves: 1
     optimizeGameObjects: 0
-    motionNodeName: mixamorig:Hips
+    motionNodeName: 
     rigImportErrors: 
     rigImportWarnings: 
     animationImportErrors: 
@@ -105,21 +105,21 @@ ModelImporter:
       name: Crawling
       takeName: mixamo.com
       firstFrame: 0
-      lastFrame: 108
+      lastFrame: 107
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
-      loopTime: 0
-      loopBlend: 0
-      loopBlendOrientation: 0
-      loopBlendPositionY: 0
-      loopBlendPositionXZ: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 1
+      loopBlendPositionY: 1
+      loopBlendPositionXZ: 1
       keepOriginalOrientation: 0
       keepOriginalPositionY: 1
-      keepOriginalPositionXZ: 0
+      keepOriginalPositionXZ: 1
       heightFromFeet: 0
       mirror: 0
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
@@ -136,10 +136,10 @@ ModelImporter:
     meshCompression: 0
     addColliders: 0
     useSRGBMaterialColor: 1
-    importVisibility: 0
-    importBlendShapes: 0
-    importCameras: 0
-    importLights: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
     swapUVChannels: 0
     generateSecondaryUV: 0
     useFileUnits: 1
@@ -411,7 +411,7 @@ ModelImporter:
     - name: mixamorig:LeftLeg
       parentName: mixamorig:LeftUpLeg
       position: {x: -0, y: 2.048595, z: 0}
-      rotation: {x: 0.28190205, y: -0.09997677, z: 0.003806198, w: -0.9542124}
+      rotation: {x: 0.28190207, y: -0.09997678, z: 0.0038061982, w: -0.9542125}
       scale: {x: 1, y: 1, z: 1}
     - name: mixamorig:LeftFoot
       parentName: mixamorig:LeftLeg
@@ -431,12 +431,12 @@ ModelImporter:
     - name: mixamorig:RightUpLeg
       parentName: mixamorig:Hips
       position: {x: 0.48775396, y: -0.334957, z: 0.014802999}
-      rotation: {x: 0.03428193, y: -0.087200545, z: 0.99519944, w: -0.028263925}
+      rotation: {x: 0.034281936, y: -0.087200545, z: 0.9951995, w: -0.028263925}
       scale: {x: 1, y: 1, z: 1}
     - name: mixamorig:RightLeg
       parentName: mixamorig:RightUpLeg
       position: {x: -0, y: 2.048529, z: 0}
-      rotation: {x: -0.32734317, y: 0.034026943, z: 0.019062757, w: 0.9441002}
+      rotation: {x: -0.32734317, y: 0.034026947, z: 0.019062757, w: 0.94410026}
       scale: {x: 1, y: 1, z: 1}
     - name: mixamorig:RightFoot
       parentName: mixamorig:RightLeg
@@ -481,7 +481,7 @@ ModelImporter:
     - name: mixamorig:LeftForeArm
       parentName: mixamorig:LeftArm
       position: {x: -0, y: 1.4398359, z: 0}
-      rotation: {x: -0.0031974916, y: 0.0013801755, z: -0.017418439, w: 0.9998422}
+      rotation: {x: -0.0031974919, y: 0.0013801755, z: -0.01741844, w: 0.9998422}
       scale: {x: 1, y: 1, z: 1}
     - name: mixamorig:LeftHand
       parentName: mixamorig:LeftForeArm
@@ -496,12 +496,12 @@ ModelImporter:
     - name: mixamorig:LeftHandIndex2
       parentName: mixamorig:LeftHandIndex1
       position: {x: -0, y: 0.11951, z: 0}
-      rotation: {x: 0.07842843, y: -0.0022266987, z: -0.012094845, w: 0.9968439}
+      rotation: {x: 0.07842844, y: -0.002226699, z: -0.012094846, w: 0.99684393}
       scale: {x: 1, y: 1, z: 1}
     - name: mixamorig:LeftHandIndex3
       parentName: mixamorig:LeftHandIndex2
       position: {x: 0.005673, y: 0.166008, z: -0.024674}
-      rotation: {x: -0.4267185, y: 0.018547857, z: -0.08235096, w: 0.9004363}
+      rotation: {x: -0.42671853, y: 0.018547859, z: -0.08235097, w: 0.9004364}
       scale: {x: 1, y: 1, z: 1}
     - name: mixamorig:LeftHandIndex4
       parentName: mixamorig:LeftHandIndex3
