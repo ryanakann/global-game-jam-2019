@@ -40,6 +40,12 @@ ModelImporter:
     100068: Mixamorig:LeftHandIndex1_end_end
     100070: Mixamorig:RightHandIndex1_end_end
     100072: Right knee_end_end
+    100074: Head_end_end_end
+    100076: Left knee_end_end_end
+    100078: Light
+    100080: Mixamorig:LeftHandIndex1_end_end_end
+    100082: Mixamorig:RightHandIndex1_end_end_end
+    100084: Right knee_end_end_end
     400000: Armature
     400002: Base
     400004: Chest
@@ -77,6 +83,12 @@ ModelImporter:
     400068: Mixamorig:LeftHandIndex1_end_end
     400070: Mixamorig:RightHandIndex1_end_end
     400072: Right knee_end_end
+    400074: Head_end_end_end
+    400076: Left knee_end_end_end
+    400078: Light
+    400080: Mixamorig:LeftHandIndex1_end_end_end
+    400082: Mixamorig:RightHandIndex1_end_end_end
+    400084: Right knee_end_end_end
     2100000: Eyes
     2100002: HeatherSkinMat
     2100004: HeatherShirtMat
@@ -92,6 +104,7 @@ ModelImporter:
     4300008: Hair
     4300010: Visor
     9500000: //RootNode
+    10800000: Light
     13700000: Base
     13700002: Eyes
     13700004: Hair
@@ -101,7 +114,7 @@ ModelImporter:
     2186277476908879412: ImportLogs
   externalObjects: {}
   materials:
-    importMaterials: 1
+    importMaterials: 0
     materialName: 0
     materialSearch: 1
     materialLocation: 1
@@ -136,8 +149,8 @@ ModelImporter:
     useSRGBMaterialColor: 1
     importVisibility: 1
     importBlendShapes: 1
-    importCameras: 1
-    importLights: 1
+    importCameras: 0
+    importLights: 0
     swapUVChannels: 0
     generateSecondaryUV: 0
     useFileUnits: 1

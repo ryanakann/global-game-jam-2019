@@ -5,12 +5,15 @@ using UnityEngine;
 public class PlayerBody : MonoBehaviour
 {
     Rigidbody rb;
-    Vector3 smooth_speed;
-    float smooth_time = 0.05f;
+    float smooth_speed;
+    float smooth_time = 0.01f, max_rot_speed = 50f;
     Item equipped_item;
     public Transform hand;
 
-    [HideInInspector]public float speed = 2f;
+    public Animator anim;
+    int speedHash, crouchHash;
+
+    [HideInInspector]public float speed = 20f;
 
 	Vector3 dirGizmo;
 
@@ -18,19 +21,29 @@ public class PlayerBody : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
         Inventory.instance.EquipEvent += Equip;
+        if (!anim)
+            anim = GetComponent<Animator>();
+        speedHash = Animator.StringToHash("Speed");
+        crouchHash = Animator.StringToHash("Crouching");
     }
 
-    public void Move(Vector3 dir, bool crouch)   //Moves player in the direction of dir at speed 
+    public void Move(bool move, Vector3 dir, bool crouch)   //Moves player in the direction of dir at speed 
     {
 		dirGizmo = dir;
-		if (rb.velocity != Vector3.zero) {
-			transform.forward = Vector3.SmoothDamp(transform.forward,
-			rb.velocity,
-			ref smooth_speed, smooth_time);
-			//transform.forward = Vector3.Lerp(transform.forward, dir, 100f * Time.deltaTime);
-		}
+        if (move)
+        {
+            if (rb.velocity != Vector3.zero)
+            {
+                float heading = Mathf.Atan2(rb.velocity.x, rb.velocity.z) * Mathf.Rad2Deg;
+                Quaternion rotation = Quaternion.Euler(0, heading, 0);
+                rb.MoveRotation(rotation);
+            }
 
-		rb.velocity = new Vector3(dir.x * speed * (crouch ? 0.5f : 1), rb.velocity.y, dir.z * speed * (crouch ? 0.5f : 1));
+            rb.velocity = new Vector3(dir.x * speed * (crouch ? 0.5f : 1), rb.velocity.y, dir.z * speed * (crouch ? 0.5f : 1));
+        }
+
+        anim.SetFloat(speedHash, rb.velocity.magnitude / speed * (crouch ? 0.5f : 1));
+        anim.SetBool(crouchHash, crouch);
     }
 
     public void Use()

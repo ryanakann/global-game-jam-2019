@@ -8,7 +8,7 @@ public class PlayerInput : MonoBehaviour
 	bool crouch;
     float hraw, vraw;
     Camera cam;
-    bool allowMovement;
+    public static bool allowMovement;
 
     private void Start()
     {
@@ -38,19 +38,16 @@ public class PlayerInput : MonoBehaviour
     {
         if (allowMovement)
         {
-            vraw = Input.GetAxisRaw("Vertical");
-            hraw = Input.GetAxisRaw("Horizontal");
+            vraw = Input.GetAxis("Vertical");
+            hraw = Input.GetAxis("Horizontal");
 
-            crouch = Input.GetAxisRaw("Fire3") > 0f;
+            crouch = Input.GetAxisRaw("Crouch") > 0f;
 
             forward = Vector3.ProjectOnPlane(cam.transform.forward, Vector3.up);
             right = Vector3.Cross(Vector3.up, forward);
             dir = (vraw * forward + hraw * right);
             dir = (dir.magnitude > 1f) ? dir.normalized : dir;
-            if (Input.GetAxisRaw("Vertical") != 0f || Input.GetAxisRaw("Horizontal") != 0f || crouch)
-            {
-                body.Move(dir, crouch);
-            }
+            body.Move(Input.GetAxisRaw("Vertical") != 0f || Input.GetAxisRaw("Horizontal") != 0f, dir, crouch);
         }
     }
 
