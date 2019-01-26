@@ -19,9 +19,9 @@ public class PlayerBody : MonoBehaviour
     {
         if (rb.velocity != Vector3.zero)
         {
-            transform.rotation = Quaternion.RotateTowards(transform.rotation,
-                Quaternion.LookRotation(new Vector3(rb.velocity.x, 0, rb.velocity.z)),
-                Time.deltaTime * rot_speed);
+            transform.forward = Vector3.SmoothDamp(transform.forward, 
+                new Vector3(rb.velocity.x, transform.forward.y, rb.velocity.z), 
+                ref smooth_speed, smooth_time);
         }
     }
 
