@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -223,6 +223,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cat (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 100004, guid: 392330405dc778744987d7f26f1f1b74, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: 392330405dc778744987d7f26f1f1b74, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.043085575
@@ -326,7 +330,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 100004, guid: 392330405dc778744987d7f26f1f1b74, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: 392330405dc778744987d7f26f1f1b74, type: 3}
       propertyPath: m_LocalPosition.x
@@ -727,12 +731,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &1709111414 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 400060, guid: 392330405dc778744987d7f26f1f1b74,
-    type: 3}
-  m_PrefabInstance: {fileID: 833411545}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1872494845 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100004, guid: 392330405dc778744987d7f26f1f1b74,
@@ -751,7 +749,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9ac8d30c6a0d9642a11e5be4c440740, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Root: {fileID: 1709111414}
+  m_Root: {fileID: 1995590818}
   m_UpdateRate: 60
   m_UpdateMode: 0
   m_Damping: 0.454
@@ -821,6 +819,12 @@ Animator:
 --- !u!4 &1872494848 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400004, guid: 392330405dc778744987d7f26f1f1b74,
+    type: 3}
+  m_PrefabInstance: {fileID: 833411545}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1995590818 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 400000, guid: 392330405dc778744987d7f26f1f1b74,
     type: 3}
   m_PrefabInstance: {fileID: 833411545}
   m_PrefabAsset: {fileID: 0}
