@@ -42,9 +42,20 @@ public class PlayerBody : MonoBehaviour
 
     }
 
+    public bool HasItem(ItemID id)
+    {
+        foreach (InventoryFrame frame in Inventory.instance.frames)
+        {
+            if (frame.item.id == id)
+                return true;
+        }
+        return false;
+    }
+
     public void OpenInventory()
     {
         Inventory.instance.Open();
+
     }
 
     public void Equip(InventoryItem i_item)
