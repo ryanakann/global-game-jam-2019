@@ -8,6 +8,7 @@ public class PlayerBody : MonoBehaviour
     float smooth_speed;
     float smooth_time = 0.01f, max_rot_speed = 50f;
     Item equipped_item;
+    public Transform hand;
 
     public Animator anim;
     int speedHash, crouchHash;
@@ -47,7 +48,7 @@ public class PlayerBody : MonoBehaviour
 
     public void Use()
     {
-
+        equipped_item?.Use();
     }
 
     public void Interact()
@@ -62,7 +63,14 @@ public class PlayerBody : MonoBehaviour
 
     public void Equip(InventoryItem i_item)
     {
+        if(equipped_item)
+        {
+            Destroy(equipped_item.gameObject);
+        }
         //spawn i_item.obj in hand, unless the i_item.id == ItemID.hand
-        //equipped_item = i_item.obj.GetComponent<Item>();
+        if(i_item.id != ItemID.Hand)
+        {
+            Instantiate(i_item.obj, hand).GetComponent<Item>();
+        }
     }
 }

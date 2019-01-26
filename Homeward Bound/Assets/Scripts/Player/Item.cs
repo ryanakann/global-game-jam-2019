@@ -5,14 +5,27 @@ using UnityEngine;
 public class Item : MonoBehaviour
 {
     public ItemID id;
-    // Start is called before the first frame update
-    void Start()
+    public InventoryItem invItem;
+    [HideInInspector] public bool equipped;
+
+
+
+    private void OnCollisionEnter(Collision collision)
     {
-        
+        if (!equipped && collision.gameObject.CompareTag("Player"))
+        {
+            PickUp();
+        }
     }
 
-    // Update is called once per frame
-    void Update()
+    public void PickUp()
+    {
+        Inventory.instance.AddItem(invItem);
+
+        Destroy(gameObject);
+    }
+
+    public virtual void Use()
     {
         
     }
