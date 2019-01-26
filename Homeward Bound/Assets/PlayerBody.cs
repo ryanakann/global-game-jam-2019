@@ -20,4 +20,14 @@ public class PlayerBody : MonoBehaviour
         rb.velocity = dir * speed;
         transform.rotation = Quaternion.LookRotation(dir);
     }
+
+    public void Use()
+    {
+
+    }
+
+    public void Interact()
+    {
+
+    }
 }

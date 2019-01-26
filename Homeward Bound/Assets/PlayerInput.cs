@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 public class PlayerInput : MonoBehaviour
 {
-    //PlayerBody body;
+    PlayerBody body;
     Vector3 forward, dir;
     Camera cam;
 
@@ -21,17 +21,17 @@ public class PlayerInput : MonoBehaviour
         {
             forward = Vector3.ProjectOnPlane(cam.transform.forward, Vector3.up);
             dir = (v * forward + h * cam.transform.right).normalized;
-            //body.Move(dir);
+            body.Move(dir);
         }
 
         if (Input.GetAxis("Use") > 0f)
         {
-            //body.Use();
+            body.Use();
         }
 
         if (Input.GetAxis("Interact") > 0f)
         {
-            //body.Interact();
+            body.Interact();
         }
     }
 }
