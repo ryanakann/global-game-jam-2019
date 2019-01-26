@@ -172,9 +172,9 @@ MonoBehaviour:
   m_LookaheadTime: 0
   m_LookaheadSmoothing: 10
   m_LookaheadIgnoreY: 0
-  m_XDamping: 1
-  m_YDamping: 1
-  m_ZDamping: 1
+  m_XDamping: 0.5
+  m_YDamping: 0.5
+  m_ZDamping: 0.5
   m_ScreenX: 0.5
   m_ScreenY: 0.5
   m_CameraDistance: 10
@@ -368,7 +368,7 @@ MonoBehaviour:
   volumeTrigger: {fileID: 7303458200805556771}
   volumeLayer:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 4294967295
   stopNaNPropagation: 1
   finalBlitToCameraTarget: 1
   antialiasingMode: 0
@@ -425,8 +425,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b9a305e18de0c04dbd257a21cd47087, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sharedProfile: {fileID: 0}
-  isGlobal: 0
+  sharedProfile: {fileID: 11400000, guid: 2fb3a38e34db24f158f632e344de9153, type: 2}
+  isGlobal: 1
   blendDistance: 0
   weight: 1
   priority: 0

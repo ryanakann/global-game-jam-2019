@@ -84,22 +84,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d65e486e4de6e5448a8fbb43dc8756a0, type: 3}
   m_Name: Grain
   m_EditorClassIdentifier: 
-  active: 1
+  active: 0
   enabled:
     overrideState: 1
     value: 1
   colored:
-    overrideState: 0
+    overrideState: 1
     value: 1
   intensity:
-    overrideState: 0
-    value: 0
-  size:
-    overrideState: 0
+    overrideState: 1
     value: 1
+  size:
+    overrideState: 1
+    value: 0.3
   lumContrib:
-    overrideState: 0
-    value: 0.8
+    overrideState: 1
+    value: 1
 --- !u!114 &114204821727394548
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -117,10 +117,10 @@ MonoBehaviour:
     overrideState: 1
     value: 1
   shutterAngle:
-    overrideState: 0
+    overrideState: 1
     value: 270
   sampleCount:
-    overrideState: 0
+    overrideState: 1
     value: 10
 --- !u!114 &114323207463430946
 MonoBehaviour:
@@ -1537,11 +1537,11 @@ MonoBehaviour:
     overrideState: 0
     value: 0
   dirtTexture:
-    overrideState: 1
+    overrideState: 0
     value: {fileID: 2800000, guid: aadb9ba0a9eb54d38a321043ed29afee, type: 3}
     defaultState: 1
   dirtIntensity:
-    overrideState: 1
+    overrideState: 0
     value: 1
 --- !u!114 &114583314196137072
 MonoBehaviour:
@@ -1555,7 +1555,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b77c5407dc277943b591ade9e6b18c5, type: 3}
   m_Name: LensDistortion
   m_EditorClassIdentifier: 
-  active: 1
+  active: 0
   enabled:
     overrideState: 1
     value: 1

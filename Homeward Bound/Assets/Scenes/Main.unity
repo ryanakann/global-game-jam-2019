@@ -179,43 +179,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4484256108411038694, guid: f09c8554e9b14495b815a674c4e6ce2d,
-        type: 3}
-      propertyPath: m_LookaheadTime
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4484256108411038694, guid: f09c8554e9b14495b815a674c4e6ce2d,
-        type: 3}
-      propertyPath: m_XDamping
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 4484256108411038694, guid: f09c8554e9b14495b815a674c4e6ce2d,
-        type: 3}
-      propertyPath: m_YDamping
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 4484256108411038694, guid: f09c8554e9b14495b815a674c4e6ce2d,
-        type: 3}
-      propertyPath: m_ZDamping
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 268143091, guid: f09c8554e9b14495b815a674c4e6ce2d, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 268143091, guid: f09c8554e9b14495b815a674c4e6ce2d, type: 3}
-      propertyPath: volumeLayer.m_Bits
-      value: 4294967295
-      objectReference: {fileID: 0}
-    - target: {fileID: 268143092, guid: f09c8554e9b14495b815a674c4e6ce2d, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 268143092, guid: f09c8554e9b14495b815a674c4e6ce2d, type: 3}
-      propertyPath: sharedProfile
-      value: 
-      objectReference: {fileID: 11400000, guid: 2fb3a38e34db24f158f632e344de9153,
-        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f09c8554e9b14495b815a674c4e6ce2d, type: 3}
 --- !u!1 &524787613
