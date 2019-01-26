@@ -15,18 +15,20 @@ public class PlayerBody : MonoBehaviour
         rb = GetComponent<Rigidbody>();
     }
 
+    public void FixedUpdate()
+    {
+        if (rb.velocity != Vector3.zero)
+        {
+            transform.rotation = Quaternion.RotateTowards(transform.rotation,
+                Quaternion.LookRotation(new Vector3(rb.velocity.x, 0, rb.velocity.z)),
+                Time.deltaTime * rot_speed);
+        }
+    }
+
 
     public void Move(Vector3 dir)   //Moves player in the direction of dir at speed 
     {
-
-        rb.velocity = Vector3.SmoothDamp(rb.velocity, new Vector3(dir.x*speed, rb.velocity.y, dir.z*speed), ref smooth_speed, smooth_time);
-
-        if (rb.velocity != Vector3.zero)
-        {
-            transform.rotation = Quaternion.RotateTowards(transform.rotation, 
-                Quaternion.LookRotation(new Vector3(rb.velocity.x, 0, rb.velocity.z)), 
-                Time.deltaTime * rot_speed);
-        }
+        rb.velocity = new Vector3(dir.x * speed, rb.velocity.y, dir.z * speed);
     }
 
     public void Use()
