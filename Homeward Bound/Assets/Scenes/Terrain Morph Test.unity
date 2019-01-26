@@ -354,7 +354,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   initialTerrain: {fileID: 810865313}
   finalTerrain: {fileID: 1038110557}
-  speed: 1
+  speed: 0.3
   useAnimationCurve: 1
   curve:
     serializedVersion: 2

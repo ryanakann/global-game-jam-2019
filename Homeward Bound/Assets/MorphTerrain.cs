@@ -22,12 +22,14 @@ public class MorphTerrain : MonoBehaviour {
 		terrainWidth = terrain.terrainData.heightmapWidth;
 		terrainHeight = terrain.terrainData.heightmapHeight;
 		heights = terrain.terrainData.GetHeights(0, 0, terrainWidth, terrainHeight);
-		print(terrain.terrainData.heightmapScale.y);
+
+		StartCoroutine(LerpTerrain());
 	}
 
 	IEnumerator LerpTerrain () {
 		bool forwards = speed > 0f;
 		float dir = forwards ? 1f : -1f;
+		float animT = 0f;
 
 		while ((forwards && t < 1f) || (!forwards && t > 0f)) {
 			for (int i = 0; i < terrainWidth; i++) {
@@ -39,7 +41,8 @@ public class MorphTerrain : MonoBehaviour {
 			}
 			terrain.terrainData.SetHeights(0, 0, heights);
 
-			t += speed * dir * Time.deltaTime * (useAnimationCurve ? curve.Evaluate(t) : 1f);
+			t += speed * dir * Time.deltaTime * (useAnimationCurve ? curve.Evaluate(animT) : 1f);
+			animT += speed * Time.deltaTime;
 			yield return new WaitForEndOfFrame();
 		}
 
