@@ -240,6 +240,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b3dce98e7a26ac449028d1ef1b27bca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hand: {fileID: 0}
   speed: 10
 --- !u!114 &152012707
 MonoBehaviour:
@@ -299,6 +300,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 0
+  invItem: {fileID: 0}
+  equipped: 0
 --- !u!4 &517528477
 Transform:
   m_ObjectHideFlags: 0
@@ -858,6 +861,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b3dce98e7a26ac449028d1ef1b27bca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hand: {fileID: 0}
   speed: 10
 --- !u!1 &1893716058
 GameObject:
@@ -991,7 +995,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 61da46b08ae02aa4cb50eaf460bb7b2e, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1044,6 +1048,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Canvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 8667579702063543695, guid: d11a68798bd81ad42a840b3f992d9e80,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8667579702063543691, guid: d11a68798bd81ad42a840b3f992d9e80,
         type: 3}
