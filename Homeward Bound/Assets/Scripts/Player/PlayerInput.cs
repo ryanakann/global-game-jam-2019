@@ -47,7 +47,6 @@ public class PlayerInput : MonoBehaviour
             right = Vector3.Cross(Vector3.up, forward);
             dir = (vraw * forward + hraw * right);
             dir = (dir.magnitude > 1f) ? dir.normalized : dir;
-            Debug.Log(dir.magnitude);
             body.Move(Input.GetAxisRaw("Vertical") != 0f || Input.GetAxisRaw("Horizontal") != 0f, dir, crouch);
         }
     }
