@@ -67,10 +67,10 @@ ModelImporter:
     secondaryUVHardAngle: 88
     secondaryUVPackMargin: 4
     useFileScale: 1
-    previousCalculatedGlobalScale: 1
+    previousCalculatedGlobalScale: 100
     hasPreviousCalculatedGlobalScale: 1
   tangentSpace:
-    normalSmoothAngle: 101
+    normalSmoothAngle: 0
     normalImportMode: 0
     tangentImportMode: 0
     normalCalculationMode: 0

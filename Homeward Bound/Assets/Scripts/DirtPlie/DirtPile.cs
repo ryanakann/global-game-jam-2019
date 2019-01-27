@@ -28,7 +28,7 @@ public class DirtPile : MonoBehaviour
     float criticalRumble = 3f;
     float rumbleCount = 0f;
 
-    float leeway = 6f;
+    float leeway = 10f;
 
     // Start is called before the first frame update
     void Start() {
