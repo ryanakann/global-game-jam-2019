@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using Cinemachine;
+using UnityEngine.Rendering.PostProcessing;
 
 public class TriggerOcean : MonoBehaviour {
 
@@ -13,14 +14,15 @@ public class TriggerOcean : MonoBehaviour {
 	private float currentVelocity;
 	public bool cutsceneStarted;
 
-    bool madeMagic;
+	public PostProcessVolume defaultVolume;
+	public PostProcessVolume oceanVolume;
 
 	private void OnTriggerEnter (Collider other) {
-        if (other.CompareTag("Player") && !cutsceneStarted && !madeMagic) {
-			print("Let's go!");
+        if (other.CompareTag("Player") && !cutsceneStarted) {
 			if (morphTerrain) {
 				morphTerrain.Lerp(0.75f / cutsceneLength);
 				StartCoroutine(FollowDolly());
+				StartCoroutine(FadeVolumes());
 			}
 		}
 
@@ -32,7 +34,18 @@ public class TriggerOcean : MonoBehaviour {
 		}
 		dolly = virtualCamera.GetCinemachineComponent<CinemachineTrackedDolly>();
 		cutsceneStarted = false;
-        madeMagic = false;
+       
+	}
+
+	public IEnumerator FadeVolumes () {
+		float t = 0f;
+		while (t < 1f) {
+			print("Ocean T:" + t);
+			defaultVolume.weight = 1 - t;
+			oceanVolume.weight = t;
+			t += 0.25f * Time.deltaTime;
+			yield return new WaitForEndOfFrame();
+		}
 	}
 
 	public IEnumerator FollowDolly () {
@@ -45,7 +58,6 @@ public class TriggerOcean : MonoBehaviour {
 		}
 		virtualCamera.enabled = false;
 		cutsceneStarted = false;
-        madeMagic = true;
         PlayerInput.allowMovement = true;
 	}
 }
