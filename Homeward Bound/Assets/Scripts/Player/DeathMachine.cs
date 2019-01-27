@@ -11,6 +11,8 @@ public class DeathMachine : MonoBehaviour
     public DeathDel DeathEvent;
     public LifeDel LifeEvent;
 
+    Animation anim;
+
     public static DeathMachine instance;
     private void Awake()
     {
@@ -21,22 +23,24 @@ public class DeathMachine : MonoBehaviour
         else if (instance != this)
         {
             Destroy(gameObject);
+            return;
         }
+
+        anim = GetComponent<Animation>();            
     }
     void Start()
     {
         deathPanel.SetActive(false);
     }
 
-    public void OnDeath(Vector3 respawn_position)
+    public void Kill(Vector3 respawn_position)
     {
         DeathEvent?.Invoke(respawn_position);
-        deathPanel.SetActive(true);
+        anim.Play();
     }
 
-    public void OnLive()
+    public void Respawn()
     {
         LifeEvent?.Invoke();
-        deathPanel.SetActive(false);
     }
 }

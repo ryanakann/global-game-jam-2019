@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 1494119011}
   - component: {fileID: 1494119010}
   - component: {fileID: 1494119009}
-  - component: {fileID: 3868265064539924840}
   m_Layer: 5
   m_Name: DeathPanel
   m_TagString: Untagged
@@ -75,22 +74,6 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
---- !u!111 &3868265064539924840
-Animation:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1494119008}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Animation: {fileID: 0}
-  m_Animations:
-  - {fileID: 7400000, guid: 7ff82da1149baf54584fa0ce83eeb796, type: 2}
-  m_WrapMode: 0
-  m_PlayAutomatically: 1
-  m_AnimatePhysics: 0
-  m_CullingType: 0
 --- !u!1 &39709581554154051
 GameObject:
   m_ObjectHideFlags: 0
@@ -5469,6 +5452,7 @@ GameObject:
   - component: {fileID: 8667579702063543684}
   - component: {fileID: 159347753}
   - component: {fileID: 838895009}
+  - component: {fileID: 7864903229881520007}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -5599,6 +5583,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   deathPanel: {fileID: 1494119008}
+--- !u!111 &7864903229881520007
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8667579702063543695}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: 7ff82da1149baf54584fa0ce83eeb796, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: 7ff82da1149baf54584fa0ce83eeb796, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!1 &8712022458476638332
 GameObject:
   m_ObjectHideFlags: 0
