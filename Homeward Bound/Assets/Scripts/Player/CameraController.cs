@@ -18,26 +18,25 @@ public class CameraController : MonoBehaviour {
 	public float defaultMinZoom = 5f;
 	public float defaultMaxZoom = 20f;
 	[Range(0f, 5f)] public float defaultScrollSpeed = 1f;
-	public PostProcessProfile defaultProfile;
+	public PostProcessVolume defaultVolume;
 
 	[Header("Ocean")]
 	public float oceanMinZoom = 5f;
 	public float oceanMaxZoom = 20f;
 	[Range(0f, 5f)] public float oceanScrollSpeed = 1f;
-	public PostProcessProfile oceanProfile
-	;
+	public PostProcessVolume oceanVolume;
 
 	[Header("Mountain")]
 	public float mountainMinZoom = 5f;
 	public float mountainMaxZoom = 20f;
 	[Range(0f, 5f)] public float mountainScrollSpeed = 1f;
-	public PostProcessProfile mountainProfile;
+	public PostProcessVolume mountainVolume;
 
 	[Header("Forest")]
 	public float forestMinZoom = 5f;
 	public float forestMaxZoom = 20f;
 	[Range(0f, 5f)] public float forestScrollSpeed = 1f;
-	public PostProcessProfile forestProfile;
+	public PostProcessVolume forestVolume;
 
 	private CinemachineVirtualCamera virtualCam;
 	private CinemachineFramingTransposer composer;
