@@ -1,31 +1,31 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class AIMover : MonoBehaviour
 {
 
     Animator anim;
-    Rigidbody rb;
+    NavMeshAgent agent;
     int speedHash;
-
-    float max_speed = 10f;
 
     public bool can_move;
 
     // Start is called before the first frame update
     void Start()
     {
-        anim = GetComponent<Animator>();
+        agent = GetComponent<NavMeshAgent>();
+        anim = GetComponentInChildren<Animator>();
         speedHash = Animator.StringToHash("Speed");
     }
 
     // Update is called once per frame
-    void FixedUpdate()
+    void Update()
     {
         if (can_move)
         {
-            float speed = Mathf.Clamp(rb.velocity.magnitude / max_speed, 0f, 1f);
+            float speed = Mathf.Clamp(agent.velocity.magnitude / agent.speed, 0f, 1f);
             anim.SetFloat(speedHash, speed);
         }
     }
