@@ -34,6 +34,8 @@ public class Inventory : MonoBehaviour
                 frame.AddItem(item);
             }
         }
+
+        Equip(item); //Idk
     }
 
     public void Equip(InventoryItem item)
@@ -44,5 +46,17 @@ public class Inventory : MonoBehaviour
     public void Open()
     {
         inventory_frame_panel.SetActive(!inventory_frame_panel.activeSelf);
+    }
+
+    public bool HasItem(ItemID id)
+    {
+        foreach (InventoryFrame frame in frames)
+        {
+            if (frame.item.id == id)
+            {
+                return true;
+            }
+        }
+        return false;
     }
 }

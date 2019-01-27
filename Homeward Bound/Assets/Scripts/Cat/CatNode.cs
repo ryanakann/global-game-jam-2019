@@ -31,9 +31,11 @@ public class CatNode : EventTrigger
     }
 
     private void OnDrawGizmos() {
-        Gizmos.color = Color.green;
+        Gizmos.color = Color.red;
 
-        Gizmos.DrawSphere(transform.position, 0.5f);
+        Gizmos.DrawSphere(transform.position, 2f);
+
+        Gizmos.color = Color.green;
 
         if (neighbors == null) {
             return;
