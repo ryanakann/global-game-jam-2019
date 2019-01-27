@@ -17,9 +17,14 @@ public class TriggerOcean : MonoBehaviour {
 	public PostProcessVolume defaultVolume;
 	public PostProcessVolume oceanVolume;
 
+
+    public GameObject spawn_in;
+
 	private void OnTriggerEnter (Collider other) {
         if (other.CompareTag("Player") && !cutsceneStarted) {
 			if (morphTerrain) {
+                if (spawn_in)
+                    spawn_in.SetActive(true);
 				GetComponent<Collider>().enabled = false;
 				PlayerInput.allowMovement = false;
 				morphTerrain.Lerp(0.75f / cutsceneLength);
@@ -46,7 +51,7 @@ public class TriggerOcean : MonoBehaviour {
 			defaultVolume.weight = 1 - t;
 			oceanVolume.weight = t;
 			t += 0.15f * Time.deltaTime;
-			FindObjectOfType<BoatMovement>().InitializeBoat();
+			FindObjectOfType<BoatMovement>()?.InitializeBoat();
 			yield return new WaitForEndOfFrame();
 		}
 	}
@@ -58,7 +63,7 @@ public class TriggerOcean : MonoBehaviour {
 			dolly.m_PathPosition = Mathf.SmoothDamp(dolly.m_PathPosition, 1f, ref currentVelocity, cutsceneLength);
 			yield return new WaitForEndOfFrame();
 		}
-		FindObjectOfType<BoatMovement>().SetSail();
+		FindObjectOfType<BoatMovement>()?.SetSail();
 		virtualCamera.enabled = false;
 		cutsceneStarted = false;
         PlayerInput.allowMovement = true;

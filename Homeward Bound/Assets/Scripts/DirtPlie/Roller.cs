@@ -9,12 +9,13 @@ public class Roller : MonoBehaviour
 
     private void Start() {
         sphere = GetComponent<SphereCollider>();
+        Destroy(gameObject, 15f);
     }
 
     private void OnCollisionEnter(Collision collision) {
         GameObject obj = collision.gameObject;
         if (obj.CompareTag("Player")) {
-            Debug.Log("BAMO!");
+            DeathMachine.instance.Kill(Vector3.zero);
         }
     }
 

@@ -6,12 +6,12 @@ public class NodeLauncher : MonoBehaviour
 {
     public GameObject dustball;
 
-    public float min_timer = 1f, max_timer = 5f;
+    public float min_timer = 0.5f, max_timer = 4f;
 
     Vector3 source;
     public Transform target;
 
-    float area = 10f, force = 200f;
+    float area = 10f, force = 10f;
 
     private void Start()
     {
@@ -21,8 +21,9 @@ public class NodeLauncher : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Body"))
+        if (other.CompareTag("Player"))
         {
+            Debug.Log("INNIE");
             target = other.transform;
             StartCoroutine("Launch");
         }
@@ -30,8 +31,9 @@ public class NodeLauncher : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.CompareTag("Body"))
+        if (other.CompareTag("Player"))
         {
+            Debug.Log("OUTTIE");
             StopCoroutine("Launch");
             target = null;
         }
@@ -41,12 +43,15 @@ public class NodeLauncher : MonoBehaviour
     {
         yield return new WaitForSeconds(Random.Range(min_timer, max_timer));
 
+        Debug.Log("AAAAAA");
         if (target)
         {
-            transform.position = new Vector3( (target.position.x - source.x) / 2f, source.y, (target.position.z - source.z) / 2f);
+            Debug.Log("GOT TARGET");
+            transform.position = new Vector3( (target.position.x + source.x) / 2f, source.y, (target.position.z + source.z) / 2f);
             GameObject dust = Instantiate(dustball, transform.position + (Random.insideUnitSphere * area), Quaternion.identity);
-            Vector3 dir = dust.transform.position - (target.transform.position + (target.GetComponent<Rigidbody>().velocity * Random.value));
-            dust.GetComponent<Rigidbody>().AddForce(dir * force);
+            dust.transform.localScale *= Random.Range(0.5f, 4.0f);
+            Vector3 dir = (target.transform.position + (target.GetComponent<Rigidbody>().velocity * Random.value)) - dust.transform.position;
+            dust.GetComponent<Rigidbody>().AddForce(dir * (force * Random.value));
         }
 
         StartCoroutine("Launch");
