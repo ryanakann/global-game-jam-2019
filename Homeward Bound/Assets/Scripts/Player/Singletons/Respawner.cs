@@ -23,6 +23,8 @@ public class Respawner : MonoBehaviour
 
     float fadeout_time = 0.1f;
 
+    bool dying;
+
     private void Awake()
     {
         if (!instance)
@@ -40,11 +42,15 @@ public class Respawner : MonoBehaviour
 
     public void FadeOut(Vector3 respawn_position, string message)
     {
-        fade_panel.SetActive(true);
-        anim.clip = fadeout;
-        anim.Play();
-        this.respawn_position = respawn_position;
-        this.message = message;
+        if (!dying)
+        {
+            dying = true;
+            fade_panel.SetActive(true);
+            anim.clip = fadeout;
+            anim.Play();
+            this.respawn_position = respawn_position;
+            this.message = message;
+        }
     }
 
     public void Messsage()
@@ -55,6 +61,7 @@ public class Respawner : MonoBehaviour
 
     public void FadeIn()
     {
+        dying = false;
         anim.clip = fadein;
         anim.Play();
         RespawnEvent?.Invoke(respawn_position);
