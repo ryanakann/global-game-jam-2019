@@ -15,7 +15,7 @@ public class Roller : MonoBehaviour
     private void OnCollisionEnter(Collision collision) {
         GameObject obj = collision.gameObject;
         if (obj.CompareTag("Player")) {
-            DeathMachine.instance.Kill(Vector3.zero);
+            DeathMachine.instance.Kill(LocationMap.instance.mountain.position);
         }
     }
 

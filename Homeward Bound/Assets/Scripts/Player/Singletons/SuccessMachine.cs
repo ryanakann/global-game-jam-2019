@@ -22,9 +22,9 @@ public class SuccessMachine : MonoBehaviour
         }
     }
 
-    public void Succeed(Vector3 respawn_position)
+    public void Succeed()
     {
-        Respawner.instance.FadeOut(respawn_position, "Today was a good day.");
+        Respawner.instance.FadeOut(LocationMap.instance.home.position, Messages.Good());
         SuccessEvent?.Invoke();
     }
 }

@@ -14,7 +14,7 @@ public class MountainEnd : MonoBehaviour
             if (spawner)
                 Destroy(spawner);
             if (success_flag)
-                SuccessMachine.instance.Succeed(Vector3.zero);
+                SuccessMachine.instance.Succeed();
         }
     }
 }
