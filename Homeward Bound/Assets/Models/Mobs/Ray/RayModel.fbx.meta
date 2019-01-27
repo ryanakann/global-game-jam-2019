@@ -1,16 +1,77 @@
 fileFormatVersion: 2
-guid: 2f132402302603643b36ce42df37d565
+guid: e7fcd2e6ca699c64cb159affe5370714
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
-    100000: //RootNode
-    400000: //RootNode
-    2100000: Ass Fault
-    2100002: Side
-    2100004: Stripe
-    2300000: //RootNode
-    3300000: //RootNode
-    4300000: Cube.003
+    100000: Armature
+    100002: Base
+    100004: Chest
+    100006: Eyes
+    100008: Head
+    100010: Head_end
+    100012: Hips
+    100014: Left arm
+    100016: Left elbow
+    100018: Left knee
+    100020: Left knee_end
+    100022: Left leg
+    100024: Left shoulder
+    100026: Left wrist
+    100028: Mixamorig:LeftHandIndex1
+    100030: Mixamorig:LeftHandIndex1_end
+    100032: Mixamorig:RightHandIndex1
+    100034: Mixamorig:RightHandIndex1_end
+    100036: Neck
+    100038: //RootNode
+    100040: Right arm
+    100042: Right elbow
+    100044: Right knee
+    100046: Right knee_end
+    100048: Right leg
+    100050: Right shoulder
+    100052: Right wrist
+    100054: Spine
+    400000: Armature
+    400002: Base
+    400004: Chest
+    400006: Eyes
+    400008: Head
+    400010: Head_end
+    400012: Hips
+    400014: Left arm
+    400016: Left elbow
+    400018: Left knee
+    400020: Left knee_end
+    400022: Left leg
+    400024: Left shoulder
+    400026: Left wrist
+    400028: Mixamorig:LeftHandIndex1
+    400030: Mixamorig:LeftHandIndex1_end
+    400032: Mixamorig:RightHandIndex1
+    400034: Mixamorig:RightHandIndex1_end
+    400036: Neck
+    400038: //RootNode
+    400040: Right arm
+    400042: Right elbow
+    400044: Right knee
+    400046: Right knee_end
+    400048: Right leg
+    400050: Right shoulder
+    400052: Right wrist
+    400054: Spine
+    2100000: Eyes
+    2100002: HeatherSkinMat
+    2100004: MarvShoesMat
+    2100006: RayHairMat
+    2100008: RayBandMat
+    2100010: RayShirtMat
+    2100012: RayShirtMat2
+    2100014: RayPantsMat
+    4300000: Eyes
+    4300002: Base
+    9500000: //RootNode
+    13700000: Base
+    13700002: Eyes
   externalObjects: {}
   materials:
     importMaterials: 0
@@ -64,7 +125,7 @@ ModelImporter:
     secondaryUVPackMargin: 4
     useFileScale: 1
     previousCalculatedGlobalScale: 1
-    hasPreviousCalculatedGlobalScale: 0
+    hasPreviousCalculatedGlobalScale: 1
   tangentSpace:
     normalSmoothAngle: 0
     normalImportMode: 0
@@ -91,7 +152,7 @@ ModelImporter:
     hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 0
+  animationType: 2
   humanoidOversampling: 1
   additionalBone: 0
   userData: 

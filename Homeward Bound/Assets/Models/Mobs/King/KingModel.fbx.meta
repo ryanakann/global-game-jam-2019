@@ -1,16 +1,100 @@
 fileFormatVersion: 2
-guid: 2f132402302603643b36ce42df37d565
+guid: 5ff0e9ad66ec0f949abfccaf5ff1ff3a
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
-    100000: //RootNode
-    400000: //RootNode
-    2100000: Ass Fault
-    2100002: Side
-    2100004: Stripe
-    2300000: //RootNode
-    3300000: //RootNode
-    4300000: Cube.003
+    100000: Armature
+    100002: Base
+    100004: Chest
+    100006: Coat
+    100008: Crown
+    100010: Ears
+    100012: Empty
+    100014: Empty.001
+    100016: Eyes
+    100018: Hair
+    100020: Head
+    100022: Head_end
+    100024: Hips
+    100026: //RootNode
+    100028: Left arm
+    100030: Left elbow
+    100032: Left knee
+    100034: Left knee_end
+    100036: Left leg
+    100038: Left shoulder
+    100040: Left wrist
+    100042: Mixamorig:LeftHandIndex1
+    100044: Mixamorig:LeftHandIndex1_end
+    100046: Mixamorig:RightHandIndex1
+    100048: Mixamorig:RightHandIndex1_end
+    100050: Neck
+    100052: Pants
+    100054: Right arm
+    100056: Right elbow
+    100058: Right knee
+    100060: Right knee_end
+    100062: Right leg
+    100064: Right shoulder
+    100066: Right wrist
+    100068: Spine
+    400000: Armature
+    400002: Base
+    400004: Chest
+    400006: Coat
+    400008: Crown
+    400010: Ears
+    400012: Empty
+    400014: Empty.001
+    400016: Eyes
+    400018: Hair
+    400020: Head
+    400022: Head_end
+    400024: Hips
+    400026: //RootNode
+    400028: Left arm
+    400030: Left elbow
+    400032: Left knee
+    400034: Left knee_end
+    400036: Left leg
+    400038: Left shoulder
+    400040: Left wrist
+    400042: Mixamorig:LeftHandIndex1
+    400044: Mixamorig:LeftHandIndex1_end
+    400046: Mixamorig:RightHandIndex1
+    400048: Mixamorig:RightHandIndex1_end
+    400050: Neck
+    400052: Pants
+    400054: Right arm
+    400056: Right elbow
+    400058: Right knee
+    400060: Right knee_end
+    400062: Right leg
+    400064: Right shoulder
+    400066: Right wrist
+    400068: Spine
+    2100000: Eyes
+    2100002: KingHair
+    2100004: KingSkinTone
+    2100006: KingCrown
+    2100008: KingCoat1
+    2100010: KingCoat2
+    2100012: KingPants
+    4300000: Eyes
+    4300002: Base
+    4300004: Crown
+    4300006: Ears
+    4300008: Coat
+    4300010: Pants
+    4300012: Hair
+    9500000: //RootNode
+    13700000: Base
+    13700002: Coat
+    13700004: Crown
+    13700006: Ears
+    13700008: Eyes
+    13700010: Hair
+    13700012: Pants
   externalObjects: {}
   materials:
     importMaterials: 0
@@ -64,7 +148,7 @@ ModelImporter:
     secondaryUVPackMargin: 4
     useFileScale: 1
     previousCalculatedGlobalScale: 1
-    hasPreviousCalculatedGlobalScale: 0
+    hasPreviousCalculatedGlobalScale: 1
   tangentSpace:
     normalSmoothAngle: 0
     normalImportMode: 0
@@ -91,7 +175,7 @@ ModelImporter:
     hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 0
+  animationType: 2
   humanoidOversampling: 1
   additionalBone: 0
   userData: 

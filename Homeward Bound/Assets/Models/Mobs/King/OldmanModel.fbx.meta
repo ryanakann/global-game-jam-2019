@@ -1,0 +1,227 @@
+fileFormatVersion: 2
+guid: 491d214f0765fb247bbb4cdb1dfb1b73
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: Armature
+    100002: Armature.002
+    100004: Base
+    100006: Chest
+    100008: Chest 1
+    100010: Ears
+    100012: Empty
+    100014: Empty.001
+    100016: Eyes
+    100018: Hair
+    100020: Head
+    100022: Head 1
+    100024: Head_end
+    100026: Head_end 1
+    100028: Hips
+    100030: Hips 1
+    100032: Left arm
+    100034: Left arm 1
+    100036: Left elbow
+    100038: Left elbow 1
+    100040: Left knee
+    100042: Left knee 1
+    100044: Left knee_end
+    100046: Left knee_end 1
+    100048: Left leg
+    100050: Left leg 1
+    100052: Left shoulder
+    100054: Left shoulder 1
+    100056: Left wrist
+    100058: Left wrist 1
+    100060: Mixamorig:LeftHandIndex1
+    100062: Mixamorig:LeftHandIndex1 1
+    100064: Mixamorig:LeftHandIndex1_end
+    100066: Mixamorig:LeftHandIndex1_end 1
+    100068: Mixamorig:RightHandIndex1
+    100070: Mixamorig:RightHandIndex1 1
+    100072: Mixamorig:RightHandIndex1_end
+    100074: Mixamorig:RightHandIndex1_end 1
+    100076: Neck
+    100078: Neck 1
+    100080: //RootNode
+    100082: Pants
+    100084: Right arm
+    100086: Right arm 1
+    100088: Right elbow
+    100090: Right elbow 1
+    100092: Right knee
+    100094: Right knee 1
+    100096: Right knee_end
+    100098: Right knee_end 1
+    100100: Right leg
+    100102: Right leg 1
+    100104: Right shoulder
+    100106: Right shoulder 1
+    100108: Right wrist
+    100110: Right wrist 1
+    100112: Shirt
+    100114: Spine
+    100116: Spine 1
+    400000: Armature
+    400002: Armature.002
+    400004: Base
+    400006: Chest
+    400008: Chest 1
+    400010: Ears
+    400012: Empty
+    400014: Empty.001
+    400016: Eyes
+    400018: Hair
+    400020: Head
+    400022: Head 1
+    400024: Head_end
+    400026: Head_end 1
+    400028: Hips
+    400030: Hips 1
+    400032: Left arm
+    400034: Left arm 1
+    400036: Left elbow
+    400038: Left elbow 1
+    400040: Left knee
+    400042: Left knee 1
+    400044: Left knee_end
+    400046: Left knee_end 1
+    400048: Left leg
+    400050: Left leg 1
+    400052: Left shoulder
+    400054: Left shoulder 1
+    400056: Left wrist
+    400058: Left wrist 1
+    400060: Mixamorig:LeftHandIndex1
+    400062: Mixamorig:LeftHandIndex1 1
+    400064: Mixamorig:LeftHandIndex1_end
+    400066: Mixamorig:LeftHandIndex1_end 1
+    400068: Mixamorig:RightHandIndex1
+    400070: Mixamorig:RightHandIndex1 1
+    400072: Mixamorig:RightHandIndex1_end
+    400074: Mixamorig:RightHandIndex1_end 1
+    400076: Neck
+    400078: Neck 1
+    400080: //RootNode
+    400082: Pants
+    400084: Right arm
+    400086: Right arm 1
+    400088: Right elbow
+    400090: Right elbow 1
+    400092: Right knee
+    400094: Right knee 1
+    400096: Right knee_end
+    400098: Right knee_end 1
+    400100: Right leg
+    400102: Right leg 1
+    400104: Right shoulder
+    400106: Right shoulder 1
+    400108: Right wrist
+    400110: Right wrist 1
+    400112: Shirt
+    400114: Spine
+    400116: Spine 1
+    2100000: Eyes
+    2100002: KingHair
+    2100004: KingSkinTone
+    2100006: KingPants
+    2100008: OldmanShirtMat
+    4300000: Eyes
+    4300002: Base
+    4300004: Ears
+    4300006: Pants
+    4300008: Hair
+    4300010: Shirt
+    9500000: //RootNode
+    13700000: Base
+    13700002: Ears
+    13700004: Eyes
+    13700006: Hair
+    13700008: Pants
+    13700010: Shirt
+  externalObjects: {}
+  materials:
+    importMaterials: 0
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 1
+  tangentSpace:
+    normalSmoothAngle: 0
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

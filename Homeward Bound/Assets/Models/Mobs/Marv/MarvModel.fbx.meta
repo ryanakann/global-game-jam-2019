@@ -1,16 +1,98 @@
 fileFormatVersion: 2
-guid: 2f132402302603643b36ce42df37d565
+guid: 9e6f5e3ea0589d140b48c11dbbf6ecdb
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
-    100000: //RootNode
-    400000: //RootNode
-    2100000: Ass Fault
-    2100002: Side
-    2100004: Stripe
-    2300000: //RootNode
-    3300000: //RootNode
-    4300000: Cube.003
+    100000: Armature
+    100002: Base
+    100004: Chest
+    100006: Ears
+    100008: Eyes
+    100010: Glasses
+    100012: Hair
+    100014: Head
+    100016: Head_end
+    100018: Hips
+    100020: Left arm
+    100022: Left elbow
+    100024: Left knee
+    100026: Left knee_end
+    100028: Left leg
+    100030: Left shoulder
+    100032: Left wrist
+    100034: //RootNode
+    100036: Mixamorig:LeftHandIndex1
+    100038: Mixamorig:LeftHandIndex1_end
+    100040: Mixamorig:RightHandIndex1
+    100042: Mixamorig:RightHandIndex1_end
+    100044: Neck
+    100046: Pants
+    100048: Right arm
+    100050: Right elbow
+    100052: Right knee
+    100054: Right knee_end
+    100056: Right leg
+    100058: Right shoulder
+    100060: Right wrist
+    100062: Shirt
+    100064: Spine
+    400000: Armature
+    400002: Base
+    400004: Chest
+    400006: Ears
+    400008: Eyes
+    400010: Glasses
+    400012: Hair
+    400014: Head
+    400016: Head_end
+    400018: Hips
+    400020: Left arm
+    400022: Left elbow
+    400024: Left knee
+    400026: Left knee_end
+    400028: Left leg
+    400030: Left shoulder
+    400032: Left wrist
+    400034: //RootNode
+    400036: Mixamorig:LeftHandIndex1
+    400038: Mixamorig:LeftHandIndex1_end
+    400040: Mixamorig:RightHandIndex1
+    400042: Mixamorig:RightHandIndex1_end
+    400044: Neck
+    400046: Pants
+    400048: Right arm
+    400050: Right elbow
+    400052: Right knee
+    400054: Right knee_end
+    400056: Right leg
+    400058: Right shoulder
+    400060: Right wrist
+    400062: Shirt
+    400064: Spine
+    2100000: Eyes
+    2100002: HeatherSkinMat
+    2100004: MarvShoesMat
+    2100006: MarvShirtMat
+    2100008: MarvShirtMat2
+    2100010: MarvPantsMat
+    2100012: HeatherHairMat
+    2100014: MavGlassesMat
+    2300000: Ears
+    3300000: Ears
+    4300000: Eyes
+    4300002: Base
+    4300004: Shirt
+    4300006: Pants
+    4300008: Hair
+    4300010: Glasses
+    4300012: Ears
+    9500000: //RootNode
+    13700000: Base
+    13700002: Eyes
+    13700004: Glasses
+    13700006: Hair
+    13700008: Pants
+    13700010: Shirt
   externalObjects: {}
   materials:
     importMaterials: 0
@@ -64,7 +146,7 @@ ModelImporter:
     secondaryUVPackMargin: 4
     useFileScale: 1
     previousCalculatedGlobalScale: 1
-    hasPreviousCalculatedGlobalScale: 0
+    hasPreviousCalculatedGlobalScale: 1
   tangentSpace:
     normalSmoothAngle: 0
     normalImportMode: 0
@@ -91,7 +173,7 @@ ModelImporter:
     hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 0
+  animationType: 2
   humanoidOversampling: 1
   additionalBone: 0
   userData: 

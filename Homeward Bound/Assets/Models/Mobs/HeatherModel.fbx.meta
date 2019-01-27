@@ -1,19 +1,86 @@
 fileFormatVersion: 2
-guid: 2f132402302603643b36ce42df37d565
+guid: fae72d515a6ece342a69ef779e6b1489
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
-    100000: //RootNode
-    400000: //RootNode
-    2100000: Ass Fault
-    2100002: Side
-    2100004: Stripe
-    2300000: //RootNode
-    3300000: //RootNode
-    4300000: Cube.003
+    100000: Armature
+    100002: Chest
+    100004: Eyes
+    100006: Head
+    100008: Head_end
+    100010: Head_end_end
+    100012: //RootNode
+    100014: Hips
+    100016: Left arm
+    100018: Left elbow
+    100020: Left knee
+    100022: Left knee_end
+    100024: Left knee_end_end
+    100026: Left leg
+    100028: Left shoulder
+    100030: Left wrist
+    100032: Mixamorig:LeftHandIndex1
+    100034: Mixamorig:LeftHandIndex1_end
+    100036: Mixamorig:LeftHandIndex1_end_end
+    100038: Mixamorig:RightHandIndex1
+    100040: Mixamorig:RightHandIndex1_end
+    100042: Mixamorig:RightHandIndex1_end_end
+    100044: Neck
+    100046: Right arm
+    100048: Right elbow
+    100050: Right knee
+    100052: Right knee_end
+    100054: Right knee_end_end
+    100056: Right leg
+    100058: Right shoulder
+    100060: Right wrist
+    100062: Spine
+    400000: Armature
+    400002: Chest
+    400004: Eyes
+    400006: Head
+    400008: Head_end
+    400010: Head_end_end
+    400012: //RootNode
+    400014: Hips
+    400016: Left arm
+    400018: Left elbow
+    400020: Left knee
+    400022: Left knee_end
+    400024: Left knee_end_end
+    400026: Left leg
+    400028: Left shoulder
+    400030: Left wrist
+    400032: Mixamorig:LeftHandIndex1
+    400034: Mixamorig:LeftHandIndex1_end
+    400036: Mixamorig:LeftHandIndex1_end_end
+    400038: Mixamorig:RightHandIndex1
+    400040: Mixamorig:RightHandIndex1_end
+    400042: Mixamorig:RightHandIndex1_end_end
+    400044: Neck
+    400046: Right arm
+    400048: Right elbow
+    400050: Right knee
+    400052: Right knee_end
+    400054: Right knee_end_end
+    400056: Right leg
+    400058: Right shoulder
+    400060: Right wrist
+    400062: Spine
+    2100000: Eyes
+    2100002: HeatherVisorMat1
+    2100004: HeatherVisorMat2
+    2100006: HeatherSkinMat
+    2100008: HeatherShirtMat
+    2100010: HeatherPantsMat1
+    2100012: HeatherPantsMat2
+    2100014: HeatherHairMat
+    4300000: Eyes
+    9500000: //RootNode
+    13700000: Eyes
   externalObjects: {}
   materials:
-    importMaterials: 0
+    importMaterials: 1
     materialName: 0
     materialSearch: 1
     materialLocation: 1
@@ -64,7 +131,7 @@ ModelImporter:
     secondaryUVPackMargin: 4
     useFileScale: 1
     previousCalculatedGlobalScale: 1
-    hasPreviousCalculatedGlobalScale: 0
+    hasPreviousCalculatedGlobalScale: 1
   tangentSpace:
     normalSmoothAngle: 0
     normalImportMode: 0
@@ -91,7 +158,7 @@ ModelImporter:
     hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 0
+  animationType: 2
   humanoidOversampling: 1
   additionalBone: 0
   userData: 
