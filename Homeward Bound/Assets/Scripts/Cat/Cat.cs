@@ -49,5 +49,6 @@ public class Cat : MonoBehaviour
     public void GitGot() {
         Debug.Log("Gottem");
         agent.isStopped = true;
+        
     }
 }
