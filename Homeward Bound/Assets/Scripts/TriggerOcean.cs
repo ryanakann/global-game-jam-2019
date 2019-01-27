@@ -46,6 +46,7 @@ public class TriggerOcean : MonoBehaviour {
 			defaultVolume.weight = 1 - t;
 			oceanVolume.weight = t;
 			t += 0.15f * Time.deltaTime;
+			FindObjectOfType<BoatMovement>().InitializeBoat();
 			yield return new WaitForEndOfFrame();
 		}
 	}
@@ -53,10 +54,11 @@ public class TriggerOcean : MonoBehaviour {
 	public IEnumerator FollowDolly () {
 		cutsceneStarted = true;
 		virtualCamera.enabled = true;
-		while (dolly.m_PathPosition < 0.75f) {
+		while (dolly.m_PathPosition < 0.85f) {
 			dolly.m_PathPosition = Mathf.SmoothDamp(dolly.m_PathPosition, 1f, ref currentVelocity, cutsceneLength);
 			yield return new WaitForEndOfFrame();
 		}
+		FindObjectOfType<BoatMovement>().SetSail();
 		virtualCamera.enabled = false;
 		cutsceneStarted = false;
         PlayerInput.allowMovement = true;
