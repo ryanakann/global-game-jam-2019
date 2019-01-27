@@ -4417,6 +4417,26 @@ PrefabInstance:
       propertyPath: forestVolume
       value: 
       objectReference: {fileID: 1865153448}
+    - target: {fileID: 1523261410, guid: f09c8554e9b14495b815a674c4e6ce2d, type: 3}
+      propertyPath: defaultMinZoom
+      value: 80
+      objectReference: {fileID: 0}
+    - target: {fileID: 1523261410, guid: f09c8554e9b14495b815a674c4e6ce2d, type: 3}
+      propertyPath: oceanMinZoom
+      value: 160
+      objectReference: {fileID: 0}
+    - target: {fileID: 1523261410, guid: f09c8554e9b14495b815a674c4e6ce2d, type: 3}
+      propertyPath: mountainMinZoom
+      value: 250
+      objectReference: {fileID: 0}
+    - target: {fileID: 1523261410, guid: f09c8554e9b14495b815a674c4e6ce2d, type: 3}
+      propertyPath: mountainMaxZoom
+      value: 250
+      objectReference: {fileID: 0}
+    - target: {fileID: 1523261410, guid: f09c8554e9b14495b815a674c4e6ce2d, type: 3}
+      propertyPath: forestMinZoom
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 6700814017888954346, guid: f09c8554e9b14495b815a674c4e6ce2d,
         type: 3}
       propertyPath: m_LocalPosition.z
@@ -7411,7 +7431,7 @@ GameObject:
   - component: {fileID: 338765967}
   - component: {fileID: 338765966}
   - component: {fileID: 338765969}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Terrain_(0.0, 0.0, -600.0)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8299,7 +8319,7 @@ GameObject:
   - component: {fileID: 404187572}
   - component: {fileID: 404187575}
   - component: {fileID: 404187576}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Terrain_(-200.0, 0.0, -200.0)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10750,7 +10770,7 @@ PrefabInstance:
     - target: {fileID: 5818714507797515073, guid: 751bce23d83726548abc1a22ee3bec8a,
         type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5818714507797515073, guid: 751bce23d83726548abc1a22ee3bec8a,
         type: 3}
@@ -15133,7 +15153,7 @@ PrefabInstance:
     - target: {fileID: 9220477883050527702, guid: f5657cee51c0dcf43845b9e41c6a31d0,
         type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9220477883050527702, guid: f5657cee51c0dcf43845b9e41c6a31d0,
         type: 3}
@@ -19056,7 +19076,7 @@ GameObject:
   - component: {fileID: 900702852}
   - component: {fileID: 900702853}
   - component: {fileID: 900702854}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Castle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22617,7 +22637,7 @@ GameObject:
   - component: {fileID: 1081960525}
   - component: {fileID: 1081960528}
   - component: {fileID: 1081960529}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Terrain
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23332,7 +23352,7 @@ GameObject:
   - component: {fileID: 1107901243}
   - component: {fileID: 1107901246}
   - component: {fileID: 1107901247}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Terrain_(0.0, 0.0, -400.0)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23606,8 +23626,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1117256059}
   - component: {fileID: 1117256061}
-  - component: {fileID: 1117256063}
-  - component: {fileID: 1117256062}
   - component: {fileID: 1117256060}
   m_Layer: 0
   m_Name: MountainTrigger
@@ -23624,7 +23642,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1117256058}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 119.6, y: 50.5, z: 281.8}
+  m_LocalPosition: {x: 128.3, y: 47.2, z: 283.6}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 268409240}
@@ -23649,8 +23667,8 @@ MonoBehaviour:
   virtualCamera: {fileID: 219628253}
   cutsceneLength: 10
   cutsceneStarted: 0
-  defaultVolume: {fileID: 0}
-  oceanVolume: {fileID: 0}
+  defaultVolume: {fileID: 80294844}
+  oceanVolume: {fileID: 833107613}
 --- !u!135 &1117256061
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -23662,34 +23680,8 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 20
-  m_Center: {x: -37.84, y: 0, z: 20.25}
---- !u!135 &1117256062
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1117256058}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 20
-  m_Center: {x: -12.03, y: 0, z: 34.5}
---- !u!135 &1117256063
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1117256058}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 20
-  m_Center: {x: -44.6, y: 0, z: -5.7}
+  m_Radius: 40
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &1117464064
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -26301,7 +26293,7 @@ GameObject:
   - component: {fileID: 1239672045}
   - component: {fileID: 1239672048}
   - component: {fileID: 1239672049}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Terrain_(-200.0, 0.0, 0.0)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28174,7 +28166,7 @@ GameObject:
   - component: {fileID: 1340928966}
   - component: {fileID: 1340928967}
   - component: {fileID: 1340928968}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Fort
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29422,7 +29414,7 @@ GameObject:
   - component: {fileID: 1397185284}
   - component: {fileID: 1397185287}
   - component: {fileID: 1397185288}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Terrain_(-200.0, 0.0, -400.0)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31286,7 +31278,7 @@ GameObject:
   - component: {fileID: 1484340626}
   - component: {fileID: 1484340627}
   - component: {fileID: 1484340628}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Ocean
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31920,7 +31912,7 @@ GameObject:
   - component: {fileID: 1497010366}
   - component: {fileID: 1497010369}
   - component: {fileID: 1497010370}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Terrain_(0.0, 0.0, 400.0)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -36294,7 +36286,7 @@ GameObject:
   - component: {fileID: 1678055647}
   - component: {fileID: 1678055648}
   - component: {fileID: 1678055649}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Cave
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -37363,7 +37355,7 @@ GameObject:
   - component: {fileID: 1720476594}
   - component: {fileID: 1720476595}
   - component: {fileID: 1720476596}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Forest
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40267,7 +40259,7 @@ GameObject:
   - component: {fileID: 1830292028}
   - component: {fileID: 1830292029}
   - component: {fileID: 1830292030}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Mountain
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -41883,7 +41875,7 @@ PrefabInstance:
     - target: {fileID: 9220477883050527702, guid: f5657cee51c0dcf43845b9e41c6a31d0,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9220477883050527702, guid: f5657cee51c0dcf43845b9e41c6a31d0,
         type: 3}
@@ -43982,7 +43974,7 @@ GameObject:
   - component: {fileID: 2029978932}
   - component: {fileID: 2029978935}
   - component: {fileID: 2029978936}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Terrain_(200.0, 0.0, 200.0)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -45330,7 +45322,7 @@ GameObject:
   - component: {fileID: 2099285632}
   - component: {fileID: 2099285635}
   - component: {fileID: 2099285636}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Terrain_(0.0, 0.0, 200.0)
   m_TagString: Untagged
   m_Icon: {fileID: 0}

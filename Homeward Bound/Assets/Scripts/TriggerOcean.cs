@@ -43,7 +43,7 @@ public class TriggerOcean : MonoBehaviour {
 			print("Ocean T:" + t);
 			defaultVolume.weight = 1 - t;
 			oceanVolume.weight = t;
-			t += 0.25f * Time.deltaTime;
+			t += 0.15f * Time.deltaTime;
 			yield return new WaitForEndOfFrame();
 		}
 	}

@@ -47,7 +47,8 @@ public class CameraController : MonoBehaviour {
 	void Start () {
 		virtualCam = GetComponent<CinemachineVirtualCamera>();
 		composer = virtualCam.GetCinemachineComponent<CinemachineFramingTransposer>();
-
+		composer.m_MaximumDistance = 1000f;
+		composer.m_MinimumDistance = 5f;
 	}
 
 	// Update is called once per frame
