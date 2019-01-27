@@ -9,7 +9,8 @@ public enum Location {
     Cave,
     Lake,
     Forest,
-    Castle
+    Castle,
+    Home
 }
 
 public class Nightbringer : MonoBehaviour
@@ -19,7 +20,8 @@ public class Nightbringer : MonoBehaviour
         Location.Cave,
         Location.Lake,
         Location.Forest,
-        Location.Cave
+        Location.Cave,
+        Location.Home
     };
 
     public static Nightbringer instance;
@@ -44,6 +46,8 @@ public class Nightbringer : MonoBehaviour
             foreach (Location key in ALL_LOCATIONS) {
                 finished[key] = false;
             }
+
+            finished[Location.Home] = true;
         }
     }
 
@@ -71,6 +75,8 @@ public class Nightbringer : MonoBehaviour
     }
 
     IEnumerator FadeToFungus(Location loc) {
+
+        //fade to black
         float timecount = 0f;
 
         while(timecount < fadeTime) {
@@ -87,6 +93,11 @@ public class Nightbringer : MonoBehaviour
 
         //Place Player At Home Here.
 
+        GameObject player = GameObject.FindWithTag("Player");
+
+        player.transform.position = LocationMap.instance.home.position;
+
+        //Fade from black
         float timecount = 0f;
 
         while (timecount < fadeTime)

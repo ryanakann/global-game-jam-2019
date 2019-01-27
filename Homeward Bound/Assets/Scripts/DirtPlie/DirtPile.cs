@@ -28,7 +28,7 @@ public class DirtPile : MonoBehaviour
     float criticalRumble = 3f;
     float rumbleCount = 0f;
 
-    float leeway = 6f;
+    float leeway = 10f;
 
     // Start is called before the first frame update
     void Start() {
@@ -48,7 +48,6 @@ public class DirtPile : MonoBehaviour
     void DoTimerShit() {
         intervalCount += Time.deltaTime;
         if (intervalCount >= interval) {
-            Debug.Log("Interval Met");
             if (player)
                 StartCoroutine("Rumble");
 
@@ -58,7 +57,6 @@ public class DirtPile : MonoBehaviour
     }
 
     IEnumerator Rumble() {
-        Debug.Log("Rumble");
         doinIt = false;
         rumbleCount = 0f;
 
@@ -92,7 +90,6 @@ public class DirtPile : MonoBehaviour
 
         feetParticles.Stop();
 
-        Debug.Log("Rumble Done");
 
         if (!doinIt) {
             doinIt = true;
@@ -108,7 +105,6 @@ public class DirtPile : MonoBehaviour
 
         if (obj.CompareTag("Player")) {
             player = obj.transform;
-            Debug.Log("Player Entered Dust");
             doinIt = true;
             feetDust = Instantiate(feetDustPrefab, player);
             feetParticles = feetDust.GetComponent<ParticleSystem>();

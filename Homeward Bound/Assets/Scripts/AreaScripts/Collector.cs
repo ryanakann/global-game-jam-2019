@@ -32,7 +32,7 @@ public class Collector : MonoBehaviour
         yield return new WaitForSeconds(aus.clip.length);
         while (transform.localScale.magnitude > 0.1f)
         {
-            transform.localScale -= transform.localScale * 0.1f * Time.deltaTime;
+            transform.localScale -= transform.localScale * 0.5f * Time.deltaTime;
             yield return null;
         }
 
