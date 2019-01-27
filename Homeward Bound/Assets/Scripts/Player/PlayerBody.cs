@@ -32,7 +32,6 @@ public class PlayerBody : MonoBehaviour
     public void Move(bool move, Vector3 dir, bool crouch)   //Moves player in the direction of dir at speed 
     {
 		dirGizmo = dir;
-        Debug.Log(dir.magnitude);
         if (move)
         {
             if (rb.velocity != Vector3.zero)
