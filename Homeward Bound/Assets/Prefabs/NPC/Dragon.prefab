@@ -895,6 +895,7 @@ GameObject:
   - component: {fileID: 2223657016739731808}
   - component: {fileID: 8948318182038165594}
   - component: {fileID: 2009405837989977147}
+  - component: {fileID: 219002427695914289}
   m_Layer: 0
   m_Name: Dragon
   m_TagString: Untagged
@@ -990,6 +991,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   flowchart: {fileID: 8063811824852435584}
+--- !u!114 &219002427695914289
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2450056171947137453}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 20c01821b4b991c4ba8315554a446637, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4632405550498627355
 GameObject:
   m_ObjectHideFlags: 0
@@ -1677,6 +1690,7 @@ GameObject:
   - component: {fileID: 5763120010677619574}
   - component: {fileID: 4680764488008051903}
   - component: {fileID: 8115566664381649982}
+  - component: {fileID: 7898593179310175456}
   m_Layer: 0
   m_Name: DragonConvo
   m_TagString: Untagged
@@ -1722,10 +1736,8 @@ MonoBehaviour:
     y: -340
     width: 1114
     height: 859
-  selectedBlocks:
-  - {fileID: 3304388479436361205}
-  selectedCommands:
-  - {fileID: 155112937960653250}
+  selectedBlocks: []
+  selectedCommands: []
   variables:
   - {fileID: 304731743960957045}
   - {fileID: 221614122987472961}
@@ -3144,6 +3156,7 @@ MonoBehaviour:
   commandList:
   - {fileID: 4270911489661521327}
   - {fileID: 5495922991850510661}
+  - {fileID: 7898593179310175456}
   - {fileID: 92271814088794002}
 --- !u!114 &4270911489661521327
 MonoBehaviour:
@@ -3392,6 +3405,34 @@ MonoBehaviour:
   vector3Data:
     vector3Ref: {fileID: 0}
     vector3Val: {x: 0, y: 0, z: 0}
+--- !u!114 &7898593179310175456
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6967311565581823289}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 688e35811870d403f9e2b1ab2a699d98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 77
+  indentLevel: 0
+  description: 
+  targetObject: {fileID: 2450056171947137453}
+  targetComponentAssemblyName: DragonQuestComplete, Assembly-CSharp, Version=0.0.0.0,
+    Culture=neutral, PublicKeyToken=null
+  targetComponentFullname: UnityEngine.Component[]
+  targetComponentText: DragonQuestComplete
+  targetMethod: Complete
+  targetMethodText: 'Complete (): Void'
+  methodParameters: []
+  saveReturnValue: 0
+  returnValueVariableKey: 
+  returnValueType: System.Void
+  showInherited: 0
+  callMode: 0
 --- !u!1 &8196132854146464712
 GameObject:
   m_ObjectHideFlags: 0
