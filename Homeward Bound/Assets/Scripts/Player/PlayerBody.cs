@@ -14,12 +14,13 @@ public class PlayerBody : MonoBehaviour
     int speedHash, crouchHash;
 
     [HideInInspector]public float speed = 20f;
-    float ground_dist = 0.01f;
+    float ground_dist = 0.1f;
     Collider body_collider;
+    PlayerRagdoll ragdoll;
 
     public bool moving;
 
-	Vector3 dirGizmo;
+	Vector3 respawn_position;
 
     private void Start()
     {
@@ -30,6 +31,9 @@ public class PlayerBody : MonoBehaviour
         speedHash = Animator.StringToHash("Speed");
         crouchHash = Animator.StringToHash("Crouching");
         body_collider = GetComponent<Collider>();
+        DeathMachine.instance.DeathEvent += Die;
+        DeathMachine.instance.LifeEvent += Live;
+        ragdoll = GetComponent<PlayerRagdoll>();
     }
 
     private void Update() {
@@ -46,7 +50,6 @@ public class PlayerBody : MonoBehaviour
 
     public void Move(bool move, Vector3 dir, bool crouch)   //Moves player in the direction of dir at speed 
     {
-		dirGizmo = dir;
         if (move)
         {
             if (rb.velocity.magnitude >= 0.1f * speed)
@@ -61,7 +64,8 @@ public class PlayerBody : MonoBehaviour
 
         moving = move;
 
-        anim.SetFloat(speedHash, rb.velocity.magnitude / speed * (crouch ? 0.5f : 1));
+        float clamp_speed = Mathf.Clamp(rb.velocity.magnitude / speed * (crouch ? 0.5f : 1), 0f, 1f);
+        anim.SetFloat(speedHash, clamp_speed);
         anim.SetBool(crouchHash, crouch);
     }
 
@@ -93,13 +97,17 @@ public class PlayerBody : MonoBehaviour
         }
     }
 
-    /*
-    private void OnCollisionEnter(Collision collision)
+    public void Die(Vector3 respawn_position)
     {
-        if (collision.contacts[0].thisCollider == body_collider)
-        {
-            rb.velocity -= Vector3.Dot(rb.velocity, collision.contacts[0].normal) * collision.contacts[0].normal;
-        }
+        ragdoll.ActivateRagdoll(true);
+        PlayerInput.allowMovement = false;
+        this.respawn_position = respawn_position;
     }
-    */
+
+    public void Live()
+    {
+        ragdoll.ActivateRagdoll(false);
+        PlayerInput.allowMovement = true;
+        transform.position = respawn_position;
+    }
 }

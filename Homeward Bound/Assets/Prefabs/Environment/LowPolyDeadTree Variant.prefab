@@ -10,7 +10,7 @@ PrefabInstance:
     - target: {fileID: 4141113261124321136, guid: b7f6d29ad38fd04438e13a7dc130e9c6,
         type: 3}
       propertyPath: m_Name
-      value: LowPolyDeadTree
+      value: LowPolyDeadTree Variant
       objectReference: {fileID: 0}
     - target: {fileID: 9087836300983044263, guid: b7f6d29ad38fd04438e13a7dc130e9c6,
         type: 3}
@@ -67,5 +67,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 7120918804734343953, guid: b7f6d29ad38fd04438e13a7dc130e9c6,
+        type: 3}
+      propertyPath: fuckyAxis
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 7120918804734343953, guid: b7f6d29ad38fd04438e13a7dc130e9c6, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: b7f6d29ad38fd04438e13a7dc130e9c6, type: 3}
