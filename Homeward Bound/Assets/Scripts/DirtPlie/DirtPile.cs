@@ -28,11 +28,13 @@ public class DirtPile : MonoBehaviour
     float criticalRumble = 3f;
     float rumbleCount = 0f;
 
+    float leeway = 6f;
+
     // Start is called before the first frame update
     void Start() {
         sphere = GetComponent<SphereCollider>();
         sphere.isTrigger = true;
-
+        vc = GameObject.FindWithTag("Virtual Cam").GetComponent<CinemachineVirtualCamera>();
         perlin = vc.GetCinemachineComponent<CinemachineBasicMultiChannelPerlin>();
     }
 
@@ -47,7 +49,8 @@ public class DirtPile : MonoBehaviour
         intervalCount += Time.deltaTime;
         if (intervalCount >= interval) {
             Debug.Log("Interval Met");
-            StartCoroutine("Rumble");
+            if (player)
+                StartCoroutine("Rumble");
 
             interval = Random.Range(5f, 10f);
             intervalCount = 0f;
@@ -75,7 +78,7 @@ public class DirtPile : MonoBehaviour
                 nowPlayerPos = player.position;
                 float diff = (lastPlayerPos - nowPlayerPos).magnitude;
 
-                if (diff > 0.1f) {
+                if (diff > leeway) {
                     Oof();
                 }
 
@@ -97,13 +100,14 @@ public class DirtPile : MonoBehaviour
     }
 
     void Oof() {
-        Debug.Log("Oof");
+        DeathMachine.instance.Kill(Vector3.zero);
     }
 
     private void OnTriggerEnter(Collider other) {
         GameObject obj = other.gameObject;
 
         if (obj.CompareTag("Player")) {
+            player = obj.transform;
             Debug.Log("Player Entered Dust");
             doinIt = true;
             feetDust = Instantiate(feetDustPrefab, player);
@@ -120,5 +124,11 @@ public class DirtPile : MonoBehaviour
             doinIt = false;
             Destroy(feetDust);
         }
+    }
+
+    private void OnDestroy()
+    {
+        if (feetParticles)
+            Destroy(feetParticles.gameObject);
     }
 }
