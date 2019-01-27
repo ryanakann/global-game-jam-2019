@@ -14,7 +14,8 @@ public class PlayerBody : MonoBehaviour
     int speedHash, crouchHash;
 
     [HideInInspector]public float speed = 20f;
-    float ground_dist = 0.5f;
+    float ground_dist = 0.01f;
+    Collider body_collider;
 
     public bool moving;
 
@@ -28,6 +29,7 @@ public class PlayerBody : MonoBehaviour
             anim = GetComponent<Animator>();
         speedHash = Animator.StringToHash("Speed");
         crouchHash = Animator.StringToHash("Crouching");
+        body_collider = GetComponent<Collider>();
     }
 
     private void Update() {
@@ -38,7 +40,7 @@ public class PlayerBody : MonoBehaviour
         }
         else
         {
-            rb.drag = 10f;
+            rb.drag = 8f;
         }
     }
 
@@ -47,9 +49,9 @@ public class PlayerBody : MonoBehaviour
 		dirGizmo = dir;
         if (move)
         {
-            if (rb.velocity != Vector3.zero)
+            if (rb.velocity.magnitude >= 0.1f * speed)
             {
-                float heading = Mathf.Atan2(rb.velocity.x, rb.velocity.z) * Mathf.Rad2Deg;
+                float heading = Mathf.Atan2(rb.velocity.x + (dir.x * 0.2f), rb.velocity.z + (dir.z * 0.2f)) * Mathf.Rad2Deg;
                 Quaternion rotation = Quaternion.Euler(0, heading, 0);
                 rb.MoveRotation(rotation);
             }
@@ -90,4 +92,14 @@ public class PlayerBody : MonoBehaviour
             Instantiate(i_item.obj, hand).GetComponent<Item>();
         }
     }
+
+    /*
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.contacts[0].thisCollider == body_collider)
+        {
+            rb.velocity -= Vector3.Dot(rb.velocity, collision.contacts[0].normal) * collision.contacts[0].normal;
+        }
+    }
+    */
 }
