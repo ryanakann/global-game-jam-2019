@@ -14,10 +14,13 @@ public class PlayerBody : MonoBehaviour
     int speedHash, crouchHash;
 
     [HideInInspector]public float speed = 20f;
+    float ground_dist = 0.1f;
+    Collider body_collider;
+    PlayerRagdoll ragdoll;
 
     public bool moving;
 
-	Vector3 dirGizmo;
+	Vector3 respawn_position;
 
     private void Start()
     {
@@ -27,16 +30,31 @@ public class PlayerBody : MonoBehaviour
             anim = GetComponent<Animator>();
         speedHash = Animator.StringToHash("Speed");
         crouchHash = Animator.StringToHash("Crouching");
+        body_collider = GetComponent<Collider>();
+        DeathMachine.instance.DeathEvent += Die;
+        DeathMachine.instance.LifeEvent += Live;
+        ragdoll = GetComponent<PlayerRagdoll>();
+    }
+
+    private void Update() {
+        RaycastHit hit;
+        if (!Physics.Raycast(transform.position, Vector3.down, out hit, ground_dist))
+        {
+            rb.drag = 0f;
+        }
+        else
+        {
+            rb.drag = 8f;
+        }
     }
 
     public void Move(bool move, Vector3 dir, bool crouch)   //Moves player in the direction of dir at speed 
     {
-		dirGizmo = dir;
         if (move)
         {
-            if (rb.velocity != Vector3.zero)
+            if (rb.velocity.magnitude >= 0.1f * speed)
             {
-                float heading = Mathf.Atan2(rb.velocity.x, rb.velocity.z) * Mathf.Rad2Deg;
+                float heading = Mathf.Atan2(rb.velocity.x + (dir.x * 0.2f), rb.velocity.z + (dir.z * 0.2f)) * Mathf.Rad2Deg;
                 Quaternion rotation = Quaternion.Euler(0, heading, 0);
                 rb.MoveRotation(rotation);
             }
@@ -76,5 +94,19 @@ public class PlayerBody : MonoBehaviour
         {
             Instantiate(i_item.obj, hand).GetComponent<Item>();
         }
+    }
+
+    public void Die(Vector3 respawn_position)
+    {
+        ragdoll.ActivateRagdoll(true);
+        PlayerInput.allowMovement = false;
+        this.respawn_position = respawn_position;
+    }
+
+    public void Live()
+    {
+        ragdoll.ActivateRagdoll(false);
+        PlayerInput.allowMovement = true;
+        transform.position = respawn_position;
     }
 }

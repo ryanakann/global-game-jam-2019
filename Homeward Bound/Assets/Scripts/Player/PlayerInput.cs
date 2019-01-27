@@ -32,6 +32,13 @@ public class PlayerInput : MonoBehaviour
         {
             body.OpenInventory();
         }
+
+        /*
+        if (Input.GetButtonDown("Ragdoll"))
+        {
+            GetComponent<PlayerRagdoll>().ActivateRagdoll(true);
+        }
+        */
     }
 
     private void FixedUpdate()
@@ -46,7 +53,8 @@ public class PlayerInput : MonoBehaviour
             forward = Vector3.ProjectOnPlane(cam.transform.forward, Vector3.up);
             right = Vector3.Cross(Vector3.up, forward);
             dir = (vraw * forward + hraw * right);
-            dir = (dir.magnitude > 1f) ? dir.normalized : dir;
+            //dir = (dir.magnitude > 1f) ? dir.normalized : dir;
+            dir = dir.normalized;
             body.Move(Input.GetAxisRaw("Vertical") != 0f || Input.GetAxisRaw("Horizontal") != 0f, dir, crouch);
         }
     }
