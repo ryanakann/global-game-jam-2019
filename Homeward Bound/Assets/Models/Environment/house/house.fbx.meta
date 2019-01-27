@@ -22,17 +22,19 @@ ModelImporter:
     2300002: Chimney
     2300004: Deco
     2300006: Roof
+    2300008: //RootNode
     3300000: Base
     3300002: Chimney
     3300004: Deco
     3300006: Roof
+    3300008: //RootNode
     4300000: Base
     4300002: Roof
     4300004: Chimney
     4300006: Deco
   externalObjects: {}
   materials:
-    importMaterials: 1
+    importMaterials: 0
     materialName: 0
     materialSearch: 1
     materialLocation: 1

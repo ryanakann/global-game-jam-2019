@@ -13,8 +13,10 @@ public class TriggerOcean : MonoBehaviour {
 	private float currentVelocity;
 	public bool cutsceneStarted;
 
+    bool madeMagic;
+
 	private void OnTriggerEnter (Collider other) {
-		if (other.CompareTag("Player") && !cutsceneStarted) {
+        if (other.CompareTag("Player") && !cutsceneStarted && !madeMagic) {
 			print("Let's go!");
 			if (morphTerrain) {
 				morphTerrain.Lerp(0.75f / cutsceneLength);
@@ -30,9 +32,11 @@ public class TriggerOcean : MonoBehaviour {
 		}
 		dolly = virtualCamera.GetCinemachineComponent<CinemachineTrackedDolly>();
 		cutsceneStarted = false;
+        madeMagic = false;
 	}
 
 	public IEnumerator FollowDolly () {
+        PlayerInput.allowMovement = false;
 		cutsceneStarted = true;
 		virtualCamera.enabled = true;
 		while (dolly.m_PathPosition < 0.75f) {
@@ -41,5 +45,7 @@ public class TriggerOcean : MonoBehaviour {
 		}
 		virtualCamera.enabled = false;
 		cutsceneStarted = false;
+        madeMagic = true;
+        PlayerInput.allowMovement = true;
 	}
 }
