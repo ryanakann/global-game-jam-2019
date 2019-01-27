@@ -8,6 +8,7 @@ public class TriggerOcean : MonoBehaviour {
 
 	public MorphTerrain morphTerrain;
 	public CinemachineVirtualCamera virtualCamera;
+	public AudioClip oceanTriggerAudio;
 	private CinemachineTrackedDolly dolly;
 	public float cutsceneLength;
 
@@ -31,6 +32,7 @@ public class TriggerOcean : MonoBehaviour {
 				morphTerrain.Lerp(0.75f / cutsceneLength);
 				StartCoroutine(FollowDolly());
 				StartCoroutine(FadeVolumes());
+				Fungus.MusicManager.instance.PlayMusic(oceanTriggerAudio, true, 1f, 0f);
 			}
 		}
 
@@ -49,7 +51,7 @@ public class TriggerOcean : MonoBehaviour {
 	public IEnumerator FadeVolumes () {
 		float t = 0f;
 		while (t < 1f) {
-			print("Ocean T:" + t);
+			//print("Ocean T:" + t);
             if (defaultVolume)
 			    defaultVolume.weight = 1 - t;
             if (oceanVolume)

@@ -3,12 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using Cinemachine;
 using UnityEngine.Rendering.PostProcessing;
+using Fungus;
 
 public class TriggerMountain : MonoBehaviour {
 
 	public MorphTerrain morphTerrain;
 	public CinemachineVirtualCamera virtualCamera;
 	private CinemachineTrackedDolly dolly;
+	public AudioClip mountainTriggerAudio;
 	public float cutsceneLength;
 
 	private float currentVelocity;
@@ -17,14 +19,22 @@ public class TriggerMountain : MonoBehaviour {
 	public PostProcessVolume defaultVolume;
 	public PostProcessVolume oceanVolume;
 
+    public GameObject spawn_in;
+
+    public Flowchart flowchart;
+
 	private void OnTriggerEnter (Collider other) {
         if (other.CompareTag("Player") && !cutsceneStarted) {
 			if (morphTerrain) {
+                if (spawn_in) {
+                    spawn_in.SetActive(true);
+                }
 				GetComponent<Collider>().enabled = false;
 				PlayerInput.allowMovement = false;
 				morphTerrain.Lerp(0.75f / cutsceneLength);
 				StartCoroutine(FollowDolly());
 				StartCoroutine(FadeVolumes());
+				Fungus.MusicManager.instance.PlayMusic(mountainTriggerAudio, true, 1f, 0f);
 			}
 		}
 
@@ -36,7 +46,8 @@ public class TriggerMountain : MonoBehaviour {
 		}
 		dolly = virtualCamera.GetCinemachineComponent<CinemachineTrackedDolly>();
 		cutsceneStarted = false;
-       
+
+        flowchart.gameObject.SetActive(false);
 	}
 
 	public IEnumerator FadeVolumes () {
@@ -60,5 +71,7 @@ public class TriggerMountain : MonoBehaviour {
 		virtualCamera.enabled = false;
 		cutsceneStarted = false;
         PlayerInput.allowMovement = true;
+        flowchart.gameObject.SetActive(true);
+        flowchart.ExecuteBlock("Warning");
 	}
 }

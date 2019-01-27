@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8343711ebc685774fad1dabc63df62dc, type: 3}
   m_Name: CatFood
   m_EditorClassIdentifier: 
-  sprite: {fileID: 0}
+  sprite: {fileID: 21300000, guid: cec1c4ff7f24a514eb0f5a3f0032d289, type: 3}
   obj: {fileID: 196746172646600284, guid: c31c3d800f111e44daf0d1d0b021f1ff, type: 3}
   id: 6
   header: Meow Meow Delight
