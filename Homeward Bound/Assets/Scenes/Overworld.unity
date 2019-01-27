@@ -5810,7 +5810,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 128845115}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 119.5, y: 0, z: -479.3}
+  m_LocalPosition: {x: 119.5, y: 3.6, z: -457}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 654398053}
@@ -11127,6 +11127,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8355f88015c84870889e93ba6261be5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Name: 
+  m_EditorClassIdentifier: 
+  terrain: {fileID: 222781829}
+  offset: {x: 100, y: 200, z: 200}
 --- !u!114 &222781827
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -47329,6 +47341,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8355f88015c84870889e93ba6261be5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Name: 
+  m_EditorClassIdentifier: 
+  terrain: {fileID: 900702850}
+  offset: {x: 100, y: 200, z: 100}
 --- !u!1001 &903229976
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -49226,7 +49250,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 935959421}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 205, y: 0, z: 86.7}
+  m_LocalPosition: {x: 205, y: 1.73, z: 86.7}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 654398053}
@@ -66957,7 +66981,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1308444091}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -41.9, y: 0, z: 169.1}
+  m_LocalPosition: {x: -41.9, y: 1.93, z: 169.1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 654398053}
@@ -86042,6 +86066,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8355f88015c84870889e93ba6261be5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Name: 
+  m_EditorClassIdentifier: 
+  terrain: {fileID: 1678055645}
+  offset: {x: 100, y: 200, z: 100}
 --- !u!114 &1678055649
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -88454,6 +88490,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8355f88015c84870889e93ba6261be5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Name: 
+  m_EditorClassIdentifier: 
+  terrain: {fileID: 1720476592}
+  offset: {x: 100, y: 200, z: 200}
 --- !u!114 &1720476596
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -99048,6 +99096,11 @@ PrefabInstance:
       propertyPath: lake
       value: 
       objectReference: {fileID: 935959422}
+    - target: {fileID: 3432311449713315237, guid: d7dfe6b4151f90249ab008916d1ed25d,
+        type: 3}
+      propertyPath: oceanTriggerAudio
+      value: 
+      objectReference: {fileID: 8300000, guid: de397a58b89bf4277908fcb0055321e5, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d7dfe6b4151f90249ab008916d1ed25d, type: 3}
 --- !u!1 &1910365922
