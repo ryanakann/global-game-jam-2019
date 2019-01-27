@@ -20,6 +20,8 @@ public class TriggerOcean : MonoBehaviour {
 	private void OnTriggerEnter (Collider other) {
         if (other.CompareTag("Player") && !cutsceneStarted) {
 			if (morphTerrain) {
+				GetComponent<Collider>().enabled = false;
+				PlayerInput.allowMovement = false;
 				morphTerrain.Lerp(0.75f / cutsceneLength);
 				StartCoroutine(FollowDolly());
 				StartCoroutine(FadeVolumes());
@@ -49,7 +51,6 @@ public class TriggerOcean : MonoBehaviour {
 	}
 
 	public IEnumerator FollowDolly () {
-        PlayerInput.allowMovement = false;
 		cutsceneStarted = true;
 		virtualCamera.enabled = true;
 		while (dolly.m_PathPosition < 0.75f) {

@@ -60,6 +60,8 @@ public class CameraController : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
+		composer.m_CameraDistance = Mathf.SmoothDamp(composer.m_CameraDistance, maxZoom, ref refVel, secondsPerTransition);
+
 		if (Physics.Raycast(player.position, Vector3.down, out hit, float.PositiveInfinity, mask)) {
 			if (hit.transform.name.Equals("Ocean")) {
 				ground = "Ocean";
@@ -152,8 +154,6 @@ public class CameraController : MonoBehaviour {
 				}
 			}
 		}
-
-		composer.m_CameraDistance = Mathf.SmoothDamp(composer.m_CameraDistance, maxZoom, ref refVel, secondsPerTransition);
 		//if (composer.m_CameraDistance < minZoom) {
 		//} else if (composer.m_CameraDistance > maxZoom) {
 		//	composer.m_CameraDistance -= 50f * Time.deltaTime;
