@@ -2,15 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public delegate void DeathDel();
+public delegate void DeathDel(Vector3 pos);
+public delegate void LifeDel();
 
-public class DeathScreen : MonoBehaviour
+public class DeathMachine : MonoBehaviour
 {
     public GameObject deathPanel; //!!!!!
-    public DeathDel LifeEvent;
     public DeathDel DeathEvent;
+    public LifeDel LifeEvent;
 
-    public static DeathScreen instance;
+    public static DeathMachine instance;
     private void Awake()
     {
         if (!instance)
@@ -27,9 +28,9 @@ public class DeathScreen : MonoBehaviour
         deathPanel.SetActive(false);
     }
 
-    public void OnDeath()
+    public void OnDeath(Vector3 respawn_position)
     {
-        DeathEvent?.Invoke();
+        DeathEvent?.Invoke(respawn_position);
         deathPanel.SetActive(true);
     }
 

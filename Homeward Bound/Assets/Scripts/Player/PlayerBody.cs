@@ -16,10 +16,11 @@ public class PlayerBody : MonoBehaviour
     [HideInInspector]public float speed = 20f;
     float ground_dist = 0.1f;
     Collider body_collider;
+    PlayerRagdoll ragdoll;
 
     public bool moving;
 
-	Vector3 dirGizmo;
+	Vector3 respawn_position;
 
     private void Start()
     {
@@ -30,8 +31,9 @@ public class PlayerBody : MonoBehaviour
         speedHash = Animator.StringToHash("Speed");
         crouchHash = Animator.StringToHash("Crouching");
         body_collider = GetComponent<Collider>();
-        DeathScreen.instance.DeathEvent += Die;
-        DeathScreen.instance.LifeEvent += Live;
+        DeathMachine.instance.DeathEvent += Die;
+        DeathMachine.instance.LifeEvent += Live;
+        ragdoll = GetComponent<PlayerRagdoll>();
     }
 
     private void Update() {
@@ -48,7 +50,6 @@ public class PlayerBody : MonoBehaviour
 
     public void Move(bool move, Vector3 dir, bool crouch)   //Moves player in the direction of dir at speed 
     {
-		dirGizmo = dir;
         if (move)
         {
             if (rb.velocity.magnitude >= 0.1f * speed)
@@ -95,16 +96,17 @@ public class PlayerBody : MonoBehaviour
         }
     }
 
-    public void Die()
+    public void Die(Vector3 respawn_position)
     {
-        //become a ragdoll bitch
+        ragdoll.ActivateRagdoll(true);
         PlayerInput.allowMovement = false;
-        DeathScreen.instance.OnDeath();
+        this.respawn_position = respawn_position;
     }
 
     public void Live()
     {
-        //unbecome a ragdoll bitch
+        ragdoll.ActivateRagdoll(false);
         PlayerInput.allowMovement = true;
+        transform.position = respawn_position;
     }
 }

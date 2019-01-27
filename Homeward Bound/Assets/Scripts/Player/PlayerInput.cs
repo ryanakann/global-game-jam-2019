@@ -33,10 +33,12 @@ public class PlayerInput : MonoBehaviour
             body.OpenInventory();
         }
 
+        /*
         if (Input.GetButtonDown("Ragdoll"))
         {
             GetComponent<PlayerRagdoll>().ActivateRagdoll(true);
         }
+        */
     }
 
     private void FixedUpdate()
