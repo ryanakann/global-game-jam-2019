@@ -16,12 +16,12 @@ public class AIMover : MonoBehaviour
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
-        anim = GetComponent<Animator>();
+        anim = GetComponentInChildren<Animator>();
         speedHash = Animator.StringToHash("Speed");
     }
 
     // Update is called once per frame
-    void FixedUpdate()
+    void Update()
     {
         if (can_move)
         {
