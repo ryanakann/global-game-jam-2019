@@ -92,7 +92,13 @@ public class PlayerBody : MonoBehaviour
         //spawn i_item.obj in hand, unless the i_item.id == ItemID.hand
         if(i_item.id != ItemID.Hand)
         {
-            Instantiate(i_item.obj, hand).GetComponent<Item>().holder = this;
+            Item newItem = Instantiate(i_item.obj, hand).GetComponent<Item>();
+            newItem.holder = this;
+            anim.SetInteger(actionIDHash, (int)newItem.id);
+        }
+        else
+        {
+            anim.SetInteger(actionIDHash, 0);
         }
     }
 
@@ -117,7 +123,7 @@ public class PlayerBody : MonoBehaviour
 
     public void Action(ActionID id)
     {
-        anim.SetInteger(actionIDHash, (int)id);
+        //anim.SetInteger(actionIDHash, (int)id);
         anim.SetTrigger(actionHash);
     }
 }

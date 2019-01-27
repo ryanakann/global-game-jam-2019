@@ -38,12 +38,11 @@ public class PlayerInput : MonoBehaviour
             body.OpenInventory();
         }
 
-        /*
         if (Input.GetButtonDown("Ragdoll"))
         {
-            GetComponent<PlayerRagdoll>().ActivateRagdoll(true);
+            //GetComponent<PlayerRagdoll>().ActivateRagdoll(true);
+            DeathMachine.instance.Kill(Vector3.zero);
         }
-        */
     }
 
     private void FixedUpdate()
