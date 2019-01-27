@@ -25,12 +25,17 @@ public class MorphTerrain : MonoBehaviour {
 	public bool useAnimationCurve = false;
 	public AnimationCurve curve;
 
+	public bool morphOnStart = false;
+
 	// Start is called before the first frame update
 	void Start () {
 		t = 0f;
 		lerping = false;
 		UpdateReferences();
 		SetInitial();
+		if (morphOnStart) {
+		    Lerp();
+		}
 	}
 
 	void UpdateReferences () {

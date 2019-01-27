@@ -224,6 +224,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 247223771}
+  - component: {fileID: 247223772}
+  - component: {fileID: 247223774}
   m_Layer: 0
   m_Name: HillRumbler
   m_TagString: Untagged
@@ -239,12 +241,41 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 247223770}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -17.1, y: 6.17, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &247223772
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 247223770}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86c6eb5ac023ea5488b0c41db29ad16c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  vc: {fileID: 488105772}
+  player: {fileID: 815728971}
+  feetDustPrefab: {fileID: 6415345082533189959, guid: 4e034f3210aa4044bb71702d6fd969eb,
+    type: 3}
+--- !u!135 &247223774
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 247223770}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 10
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &352412273
 GameObject:
   m_ObjectHideFlags: 0
@@ -337,6 +368,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &488105772 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7790219975811862551, guid: f09c8554e9b14495b815a674c4e6ce2d,
+    type: 3}
+  m_PrefabInstance: {fileID: 1917629299}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45e653bab7fb20e499bda25e1b646fea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &559005782
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -415,6 +458,28 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 11462346, guid: 5e7fbc8d4eb714b279eeeef2262c1e1a, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 5e7fbc8d4eb714b279eeeef2262c1e1a, type: 3}
+--- !u!1 &565276790 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5009207480093299910, guid: f09c8554e9b14495b815a674c4e6ce2d,
+    type: 3}
+  m_PrefabInstance: {fileID: 1917629299}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &565276795
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 565276790}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68bb026fafb42b14791938953eaace77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_NoiseProfile: {fileID: 11400000, guid: 69ce8388f6785dd4c8c39915efece2f4, type: 2}
+  m_AmplitudeGain: 0
+  m_FrequencyGain: 1
+  mNoiseOffsets: {x: 0, y: 0, z: 0}
 --- !u!1 &669167186
 GameObject:
   m_ObjectHideFlags: 0
@@ -1769,8 +1834,8 @@ ParticleSystem:
       maxColor: {r: 1, g: 1, b: 1, a: 1}
       maxGradient:
         serializedVersion: 2
-        key0: {r: 0.5764706, g: 0.5019608, b: 0.31764707, a: 1}
-        key1: {r: 0.5764706, g: 0.5019608, b: 0.31764707, a: 0}
+        key0: {r: 0.8784314, g: 0.74509805, b: 0.6, a: 1}
+        key1: {r: 0.8784314, g: 0.74509805, b: 0.6, a: 0}
         key2: {r: 1, g: 1, b: 1, a: 0}
         key3: {r: 0, g: 0, b: 0, a: 0}
         key4: {r: 0, g: 0, b: 0, a: 0}
@@ -1785,7 +1850,7 @@ ParticleSystem:
         ctime5: 0
         ctime6: 0
         ctime7: 0
-        atime0: 37779
+        atime0: 46260
         atime1: 65535
         atime2: 65535
         atime3: 0
@@ -5157,6 +5222,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b103f18087c8354d82ec7a753b14997, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!4 &815728971 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4024052645519078399, guid: f09c8554e9b14495b815a674c4e6ce2d,
+    type: 3}
+  m_PrefabInstance: {fileID: 1917629299}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &838895006
 PrefabInstance:
   m_ObjectHideFlags: 0
