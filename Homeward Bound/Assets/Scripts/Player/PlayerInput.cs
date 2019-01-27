@@ -23,6 +23,11 @@ public class PlayerInput : MonoBehaviour
             body.Use();
         }
 
+        if (Input.GetButtonDown("Jump"))
+        {
+            GetComponent<Animator>().SetTrigger("Action");
+        }
+
         if (Input.GetButtonDown("Interact"))
         {
             body.Interact();
