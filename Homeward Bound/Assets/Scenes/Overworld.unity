@@ -3692,8 +3692,8 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 5
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Radius: 20
+  m_Center: {x: 17.55, y: -0.03, z: 2.77}
 --- !u!4 &179232620
 Transform:
   m_ObjectHideFlags: 0
@@ -4499,6 +4499,11 @@ PrefabInstance:
       propertyPath: forestVolume
       value: 
       objectReference: {fileID: 1865153448}
+    - target: {fileID: 7303458200805556768, guid: f09c8554e9b14495b815a674c4e6ce2d,
+        type: 3}
+      propertyPath: m_DefaultBlend.m_Time
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 268143091, guid: f09c8554e9b14495b815a674c4e6ce2d, type: 3}
       propertyPath: m_AfterStackBundles.Array.size
       value: 1
