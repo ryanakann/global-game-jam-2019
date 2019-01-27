@@ -8,6 +8,7 @@ public class CameraController : MonoBehaviour {
 	public Transform player;
 	public LayerMask mask;
 	public string ground;
+	private string groundLF;
 	public float secondsPerTransition = 5f;
 	private float transitionsPerSecond;
 
@@ -20,6 +21,7 @@ public class CameraController : MonoBehaviour {
 	public float defaultMinZoom = 5f;
 	public float defaultMaxZoom = 20f;
 	[Range(0f, 5f)] public float defaultScrollSpeed = 1f;
+	public AudioClip defaultMusic;
 	public PostProcessVolume defaultVolume;
 
 	[Header("Ocean")]
@@ -27,6 +29,7 @@ public class CameraController : MonoBehaviour {
 	public float oceanMaxZoom = 20f;
 	public bool oceanTriggered = false;
 	[Range(0f, 5f)] public float oceanScrollSpeed = 1f;
+	public AudioClip oceanMusic;
 	public PostProcessVolume oceanVolume;
 
 	[Header("Mountain")]
@@ -34,6 +37,7 @@ public class CameraController : MonoBehaviour {
 	public float mountainMaxZoom = 20f;
 	public bool mountainTriggered = false;
 	[Range(0f, 5f)] public float mountainScrollSpeed = 1f;
+	public AudioClip mountainMusic;
 	public PostProcessVolume mountainVolume;
 
 	[Header("Forest")]
@@ -41,6 +45,7 @@ public class CameraController : MonoBehaviour {
 	public float forestMaxZoom = 20f;
 	public bool forestTriggered = false;
 	[Range(0f, 5f)] public float forestScrollSpeed = 1f;
+	public AudioClip forestMusic;
 	public PostProcessVolume forestVolume;
 
 	private CinemachineVirtualCamera virtualCam;
@@ -82,6 +87,10 @@ public class CameraController : MonoBehaviour {
 				} else {
 					oceanVolume.weight = 1f;
 				}
+
+				if (ground != groundLF) {
+					Fungus.MusicManager.instance.PlayMusic(oceanMusic, true, 5f, 0f);
+				}
 			} else if (hit.transform.name.Equals("Mountain")) {
 				ground = "Mountain";
 				minZoom = mountainMinZoom;
@@ -102,6 +111,10 @@ public class CameraController : MonoBehaviour {
 					mountainVolume.weight = 1f;
 				}
 
+				if (ground != groundLF) {
+					Fungus.MusicManager.instance.PlayMusic(mountainMusic, true, 5f, 0f);
+				}
+
 			} else if (hit.transform.name.Equals("Forest")) {
 				ground = "Forest";
 				minZoom = forestMinZoom;
@@ -120,6 +133,10 @@ public class CameraController : MonoBehaviour {
 					}
 				} else {
 					forestVolume.weight = 1f;
+				}
+
+				if (ground != groundLF) {
+					Fungus.MusicManager.instance.PlayMusic(defaultMusic, true, 5f, 0f);
 				}
 			} else {
 				ground = "Default";
@@ -152,7 +169,13 @@ public class CameraController : MonoBehaviour {
 				} else {
 					defaultVolume.weight = 1f;
 				}
+
+				if (ground != groundLF) {
+					Fungus.MusicManager.instance.PlayMusic(defaultMusic, true, 5f, 0f);
+				}
 			}
+
+			groundLF = ground;
 		}
 		//if (composer.m_CameraDistance < minZoom) {
 		//} else if (composer.m_CameraDistance > maxZoom) {

@@ -13,11 +13,18 @@ namespace Fungus
     public class MusicManager : MonoBehaviour
     {
         protected AudioSource audioSource;
+		public static MusicManager instance;
 
         protected virtual void Awake()
         {
-            audioSource = GetComponent<AudioSource>();            
-        }
+            audioSource = GetComponent<AudioSource>();
+
+			if (!instance) {
+				instance = this;
+ 			} else {
+				Destroy(gameObject);
+			}
+		}
 
         protected virtual void Start()
         {
