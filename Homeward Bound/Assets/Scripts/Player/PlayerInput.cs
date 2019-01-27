@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 public class PlayerInput : MonoBehaviour
 {
+    public GameObject headband;
+
     PlayerBody body;
     Vector3 forward, right, dir;
 	bool crouch;
@@ -23,9 +25,10 @@ public class PlayerInput : MonoBehaviour
             body.Use();
         }
 
-        if (Input.GetButtonDown("Jump"))
+        if (Input.GetButtonDown("Headband"))
         {
-            GetComponent<Animator>().SetTrigger("Action");
+           headband.SetActive(!headband.activeSelf);
+            
         }
 
         if (Input.GetButtonDown("Interact"))

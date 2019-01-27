@@ -62,6 +62,11 @@ ModelImporter:
     100112: Shirt
     100114: Spine
     100116: Spine 1
+    100118: Head_end_end
+    100120: Left knee_end_end
+    100122: Mixamorig:LeftHandIndex1_end_end
+    100124: Mixamorig:RightHandIndex1_end_end
+    100126: Right knee_end_end
     400000: Armature
     400002: Armature.002
     400004: Base
@@ -121,6 +126,11 @@ ModelImporter:
     400112: Shirt
     400114: Spine
     400116: Spine 1
+    400118: Head_end_end
+    400120: Left knee_end_end
+    400122: Mixamorig:LeftHandIndex1_end_end
+    400124: Mixamorig:RightHandIndex1_end_end
+    400126: Right knee_end_end
     2100000: Eyes
     2100002: KingHair
     2100004: KingSkinTone
@@ -152,7 +162,8 @@ ModelImporter:
     resampleCurves: 1
     optimizeGameObjects: 0
     motionNodeName: 
-    rigImportErrors: 
+    rigImportErrors: "Avatar creation failed:\n\tTransform 'Left leg 1' for human
+      bone 'LeftUpperLeg' not found\n"
     rigImportWarnings: 
     animationImportErrors: 
     animationImportWarnings: 
