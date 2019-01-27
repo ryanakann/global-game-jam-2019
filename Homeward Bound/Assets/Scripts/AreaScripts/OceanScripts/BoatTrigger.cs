@@ -18,7 +18,12 @@ public class BoatTrigger : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (Respawner.instance.dying)
+        {
+            boat.move = false;
+            boat.start = false;
+            PlayerInput.allowMovement = true;
+        }
     }
 
     private void OnTriggerStay(Collider other)
