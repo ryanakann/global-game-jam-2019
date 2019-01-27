@@ -5,13 +5,11 @@ using UnityEngine;
 public class PlayerBody : MonoBehaviour
 {
     Rigidbody rb;
-    float smooth_speed;
-    float smooth_time = 0.01f, max_rot_speed = 50f;
     Item equipped_item;
     public Transform hand;
 
     public Animator anim;
-    int speedHash, crouchHash;
+    int speedHash, crouchHash, actionHash, actionIDHash;
 
     [HideInInspector]public float speed = 20f;
     float ground_dist = 0.1f;
@@ -19,8 +17,6 @@ public class PlayerBody : MonoBehaviour
     PlayerRagdoll ragdoll;
 
     public bool moving;
-
-	Vector3 respawn_position;
 
     private void Start()
     {
@@ -30,9 +26,12 @@ public class PlayerBody : MonoBehaviour
             anim = GetComponent<Animator>();
         speedHash = Animator.StringToHash("Speed");
         crouchHash = Animator.StringToHash("Crouching");
+        actionHash = Animator.StringToHash("Action");
+        actionIDHash = Animator.StringToHash("ActionID");
         body_collider = GetComponent<Collider>();
-        DeathMachine.instance.DeathEvent += Die;
-        DeathMachine.instance.LifeEvent += Live;
+        DeathMachine.instance.DeathEvent += OnDeath;
+        SuccessMachine.instance.SuccessEvent += OnSuccess;
+        Respawner.instance.RespawnEvent += OnRespawn;
         ragdoll = GetComponent<PlayerRagdoll>();
     }
 
@@ -93,21 +92,32 @@ public class PlayerBody : MonoBehaviour
         //spawn i_item.obj in hand, unless the i_item.id == ItemID.hand
         if(i_item.id != ItemID.Hand)
         {
-            Instantiate(i_item.obj, hand).GetComponent<Item>();
+            Instantiate(i_item.obj, hand).GetComponent<Item>().holder = this;
         }
     }
 
-    public void Die(Vector3 respawn_position)
+    public void OnDeath()
     {
         ragdoll.ActivateRagdoll(true);
         PlayerInput.allowMovement = false;
-        this.respawn_position = respawn_position;
     }
 
-    public void Live()
+    public void OnSuccess()
+    {
+        PlayerInput.allowMovement = false;
+        Action(ActionID.Dance);
+    }
+
+    public void OnRespawn(Vector3 respawn_position)
     {
         ragdoll.ActivateRagdoll(false);
         PlayerInput.allowMovement = true;
         transform.position = respawn_position;
+    }
+
+    public void Action(ActionID id)
+    {
+        anim.SetInteger(actionIDHash, (int)id);
+        anim.SetTrigger(actionHash);
     }
 }

@@ -11,13 +11,14 @@ GameObject:
   - component: {fileID: 1494119011}
   - component: {fileID: 1494119010}
   - component: {fileID: 1494119009}
+  - component: {fileID: 6950704638142010062}
   m_Layer: 5
-  m_Name: DeathPanel
+  m_Name: FadePanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1494119011
 RectTransform:
   m_ObjectHideFlags: 0
@@ -74,6 +75,23 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
+--- !u!111 &6950704638142010062
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1494119008}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 0}
+  m_Animations:
+  - {fileID: 0}
+  - {fileID: 7400000, guid: ef798e4b6ddc8954ebc4d352cf0f76bf, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!1 &39709581554154051
 GameObject:
   m_ObjectHideFlags: 0
@@ -5452,7 +5470,8 @@ GameObject:
   - component: {fileID: 8667579702063543684}
   - component: {fileID: 159347753}
   - component: {fileID: 838895009}
-  - component: {fileID: 7864903229881520007}
+  - component: {fileID: 4787652569223519577}
+  - component: {fileID: 5156616999357400841}
   m_Layer: 5
   m_Name: GameCanvas
   m_TagString: Untagged
@@ -5582,23 +5601,32 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 538fe7fc0378e1741adc265ff725de40, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  deathPanel: {fileID: 1494119008}
---- !u!111 &7864903229881520007
-Animation:
+--- !u!114 &4787652569223519577
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8667579702063543695}
-  m_Enabled: 0
-  serializedVersion: 3
-  m_Animation: {fileID: 7400000, guid: 7ff82da1149baf54584fa0ce83eeb796, type: 2}
-  m_Animations:
-  - {fileID: 7400000, guid: 7ff82da1149baf54584fa0ce83eeb796, type: 2}
-  m_WrapMode: 0
-  m_PlayAutomatically: 1
-  m_AnimatePhysics: 0
-  m_CullingType: 0
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a0e1ec7f3aa91341a8eb3282fd3d97e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &5156616999357400841
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8667579702063543695}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 988a396241a9af0499d2532db1ba1b51, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fadeAnim: {fileID: 0}
+  flow: {fileID: 0}
 --- !u!1 &8712022458476638332
 GameObject:
   m_ObjectHideFlags: 0
