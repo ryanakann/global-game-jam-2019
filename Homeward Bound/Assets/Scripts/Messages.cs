@@ -6,7 +6,7 @@ public class Messages
 {
     static string[] goodboys = new string[] {
 
-    }
+    };
 
     static string[] badboys = new string[] {
 
