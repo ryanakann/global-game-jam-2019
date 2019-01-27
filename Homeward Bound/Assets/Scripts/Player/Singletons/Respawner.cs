@@ -23,7 +23,7 @@ public class Respawner : MonoBehaviour
 
     float fadeout_time = 0.1f;
 
-    bool dying;
+    public bool dying;
 
     private void Awake()
     {

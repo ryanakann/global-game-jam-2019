@@ -23,6 +23,7 @@ public class PlayerRagdoll : MonoBehaviour
     public void ActivateRagdoll(bool act)
     {
         rb.freezeRotation = !act;
+        rb.isKinematic = false;
         if (act && !GetComponent<CharacterJoint>()) {
             gameObject.AddComponent<CharacterJoint>().connectedBody = hips;
         }
