@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
@@ -49,6 +49,6 @@ public class Cat : MonoBehaviour
     public void GitGot() {
         Debug.Log("Gottem");
         agent.isStopped = true;
-        
+
     }
 }
