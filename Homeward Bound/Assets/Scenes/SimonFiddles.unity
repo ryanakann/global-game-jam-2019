@@ -428,6 +428,7 @@ GameObject:
   - component: {fileID: 669167189}
   - component: {fileID: 669167188}
   - component: {fileID: 669167187}
+  - component: {fileID: 669167192}
   m_Layer: 0
   m_Name: Roller
   m_TagString: Untagged
@@ -5144,6 +5145,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &669167192
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 669167186}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b103f18087c8354d82ec7a753b14997, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &838895006
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5760,6 +5773,11 @@ PrefabInstance:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 4024052645519078336, guid: f09c8554e9b14495b815a674c4e6ce2d,
+        type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f09c8554e9b14495b815a674c4e6ce2d, type: 3}
 --- !u!1 &2050727336 stripped
@@ -5947,7 +5965,7 @@ PrefabInstance:
     - target: {fileID: 1537532530938186134, guid: d6b223cdf4f4f2d4f843697782b2df3f,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.72
+      value: -8.95
       objectReference: {fileID: 0}
     - target: {fileID: 1537532530938186134, guid: d6b223cdf4f4f2d4f843697782b2df3f,
         type: 3}
