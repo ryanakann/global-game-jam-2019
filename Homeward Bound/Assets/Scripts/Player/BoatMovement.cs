@@ -62,4 +62,24 @@ public class BoatMovement : MonoBehaviour
         anim.Play();
         DeathMachine.instance.Kill(Vector3.zero);
 	}
+
+    private void OnTriggerEnter(Collider collider)
+    {
+        if (collider.CompareTag("Crashable"))
+        {
+            Sink();
+        }
+        else if (collider.CompareTag("Item"))
+        {
+            move = false;
+        }
+    }
+
+    private void OnTriggerExit(Collider collider)
+    {
+        if (collider.CompareTag("Item"))
+        {
+            move = true;
+        }
+    }
 }

@@ -19,6 +19,7 @@ public class TriggerOcean : MonoBehaviour {
 
 
     public GameObject spawn_in;
+    Vector3 org_pos;
 
 	private void OnTriggerEnter (Collider other) {
         if (other.CompareTag("Player") && !cutsceneStarted) {
@@ -41,7 +42,8 @@ public class TriggerOcean : MonoBehaviour {
 		}
 		dolly = virtualCamera.GetCinemachineComponent<CinemachineTrackedDolly>();
 		cutsceneStarted = false;
-       
+        if (spawn_in)
+            org_pos = spawn_in.transform.position;
 	}
 
 	public IEnumerator FadeVolumes () {
