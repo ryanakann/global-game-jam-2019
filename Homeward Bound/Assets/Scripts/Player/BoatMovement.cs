@@ -39,6 +39,7 @@ public class BoatMovement : MonoBehaviour
     }
 
 	public void InitializeBoat () {
+        transform.up = Vector3.up;
 		StartCoroutine(InitializeBoatCR());
 	}
 

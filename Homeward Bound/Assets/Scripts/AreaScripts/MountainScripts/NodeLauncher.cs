@@ -23,7 +23,6 @@ public class NodeLauncher : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            Debug.Log("INNIE");
             target = other.transform;
             StartCoroutine("Launch");
         }
@@ -33,7 +32,6 @@ public class NodeLauncher : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            Debug.Log("OUTTIE");
             StopCoroutine("Launch");
             target = null;
         }
@@ -43,10 +41,8 @@ public class NodeLauncher : MonoBehaviour
     {
         yield return new WaitForSeconds(Random.Range(min_timer, max_timer));
 
-        Debug.Log("AAAAAA");
         if (target)
         {
-            Debug.Log("GOT TARGET");
             transform.position = new Vector3( (target.position.x + source.x) / 2f, source.y, (target.position.z + source.z) / 2f);
             GameObject dust = Instantiate(dustball, transform.position + (Random.insideUnitSphere * area), Quaternion.identity);
             dust.transform.localScale *= Random.Range(0.5f, 4.0f);
