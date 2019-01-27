@@ -23,4 +23,16 @@ public class CastleCrashers : MonoBehaviour
     {
         anim.SetTrigger("Toggle");
     }
+
+	private void OnTriggerEnter (Collider other) {
+		if (other.CompareTag("Player")) {
+			ToggleCastle();
+		}
+	}
+
+	private void OnTriggerExit (Collider other) {
+		if (other.CompareTag("Player")) {
+			ToggleCastle();
+		}
+	}
 }
