@@ -6,11 +6,14 @@ public class BoatMovement : MonoBehaviour
 {
 	public Transform player;
     Rigidbody rb;
+    public Transform boatPoint;
 
-    public bool move;   //If true, allow boat to move and rotate
+    Animator anim;
 
-    public float speed;
-    public float turningSpeed;
+    public bool move, start;   //If true, allow boat to move and rotate
+
+    public float speed = 500f;
+    [HideInInspector] public float turningSpeed = 10f;
 
 
     // Start is called before the first frame update
@@ -18,6 +21,7 @@ public class BoatMovement : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
 		move = false;
+        anim = GetComponentInChildren<Animator>();
     }
 
     // Update is called once per frame
@@ -26,43 +30,32 @@ public class BoatMovement : MonoBehaviour
         if(move)
         {
             rb.velocity = transform.forward * speed;
-
             float hz = Input.GetAxisRaw("Horizontal");
             Vector3 rotate = new Vector3(0.0f, hz * turningSpeed, 0.0f);
             transform.Rotate(rotate);
-			player.position = transform.Find("JoinPoint").position;
+            Debug.Log("MKAY");
 		}
         else
         {
             rb.velocity = Vector3.zero;
         }
+        if (player && start)
+        {
+            player.position = boatPoint.position;
+            player.rotation = boatPoint.rotation;
+        }
     }
 
-	public void InitializeBoat () {
+    public void InitializeBoat()
+    {
         transform.up = Vector3.up;
-		StartCoroutine(InitializeBoatCR());
-	}
-
-	IEnumerator InitializeBoatCR () {
-		while (transform.position.y < 46f) {
-			transform.position += 0.05f * Vector3.up * Time.deltaTime;
-			yield return new WaitForEndOfFrame();
-		}
-
-		if (player) {
-			player.position = transform.Find("JoinPoint").position;
-
-			PlayerInput.allowMovement = false;
-		}
-
-		yield return new WaitForSeconds(10f);
-	}
-
-	public void SetSail () {
-		move = true;
-	}
+        move = false;
+    }
 
 	public void Sink () {
-
+        start = false;
+        move = false;
+        anim.SetTrigger("Crash");
+        DeathMachine.instance.Kill(Vector3.zero);
 	}
 }
