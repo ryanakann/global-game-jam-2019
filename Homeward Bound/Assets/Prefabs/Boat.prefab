@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8840427226312599778}
   - component: {fileID: 8840427226312599777}
   - component: {fileID: 8840427226312599788}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Boat
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 8840427226312599776}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 20, y: 20, z: 20}
   m_Children:
   - {fileID: 8326744697550229189}
   - {fileID: 8840427226893091153}
@@ -49,7 +49,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 80
   m_CollisionDetection: 0
 --- !u!114 &8840427226312599777
 MonoBehaviour:
@@ -65,9 +65,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 0}
   boatPoint: {fileID: 8326744697550229189}
+  bob: {fileID: 7400000, guid: e8e99afeba3f34c4983579f8acbae158, type: 2}
+  sink: {fileID: 7400000, guid: 27dea80de4d4060458567c72103aa14d, type: 2}
   move: 0
   start: 0
-  speed: 2
+  speed: 30
   turningSpeed: 2
 --- !u!135 &8840427226312599788
 SphereCollider:
@@ -77,11 +79,28 @@ SphereCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8840427226312599776}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.6
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!111 &1385589461
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8840427226892606833}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: e8e99afeba3f34c4983579f8acbae158, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: e8e99afeba3f34c4983579f8acbae158, type: 2}
+  - {fileID: 7400000, guid: 27dea80de4d4060458567c72103aa14d, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!1 &8946483067761977828
 GameObject:
   m_ObjectHideFlags: 0
@@ -91,7 +110,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8326744697550229189}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: JoinPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -122,6 +141,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 980229b1b8578cd41a95099d1b33449a, type: 3}
       propertyPath: m_Name
       value: paperBoat
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 980229b1b8578cd41a95099d1b33449a, type: 3}
+      propertyPath: m_Layer
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 980229b1b8578cd41a95099d1b33449a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -169,7 +192,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 980229b1b8578cd41a95099d1b33449a, type: 3}
       propertyPath: m_LocalScale.x
-      value: 20.00003
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 980229b1b8578cd41a95099d1b33449a, type: 3}
       propertyPath: m_LocalScale.y
@@ -179,9 +202,14 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 20
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 9500000, guid: 980229b1b8578cd41a95099d1b33449a, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 980229b1b8578cd41a95099d1b33449a, type: 3}
+--- !u!1 &8840427226892606833 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100000, guid: 980229b1b8578cd41a95099d1b33449a,
+    type: 3}
+  m_PrefabInstance: {fileID: 8840427226892704721}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &8840427226893091153 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 980229b1b8578cd41a95099d1b33449a,

@@ -8,7 +8,8 @@ public class BoatMovement : MonoBehaviour
     Rigidbody rb;
     public Transform boatPoint;
 
-    Animator anim;
+    Animation anim;
+    public AnimationClip bob, sink;
 
     public bool move, start;   //If true, allow boat to move and rotate
 
@@ -21,7 +22,7 @@ public class BoatMovement : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
 		move = false;
-        anim = GetComponentInChildren<Animator>();
+        anim = GetComponentInChildren<Animation>();
     }
 
     // Update is called once per frame
@@ -48,6 +49,8 @@ public class BoatMovement : MonoBehaviour
 
     public void InitializeBoat()
     {
+        anim.clip = bob;
+        anim.Play();
         transform.up = Vector3.up;
         move = false;
     }
@@ -55,7 +58,8 @@ public class BoatMovement : MonoBehaviour
 	public void Sink () {
         start = false;
         move = false;
-        anim.SetTrigger("Crash");
+        anim.clip = sink;
+        anim.Play();
         DeathMachine.instance.Kill(Vector3.zero);
 	}
 }

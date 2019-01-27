@@ -23,4 +23,8 @@ public class InventoryChecker : MonoBehaviour
     public bool CheckBaseball(ItemID id) {
         return Inventory.instance.HasItem(id);
     }
+
+    public void AddToInventory(InventoryItem item) {
+        Inventory.instance.AddItem(item);
+    }
 }
