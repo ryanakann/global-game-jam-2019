@@ -56,10 +56,12 @@ public class BoatMovement : MonoBehaviour
     }
 
 	public void Sink () {
+        Vector3 offset = new Vector3(transform.position.x, transform.position.y-10f, transform.position.z);
         start = false;
         move = false;
         anim.clip = sink;
         anim.Play();
+        transform.position = Vector3.MoveTowards(transform.position, offset, 20f);
         DeathMachine.instance.Kill(Vector3.zero);
 	}
 
