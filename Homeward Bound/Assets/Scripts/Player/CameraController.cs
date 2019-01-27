@@ -41,6 +41,8 @@ public class CameraController : MonoBehaviour {
 	private CinemachineVirtualCamera virtualCam;
 	private CinemachineFramingTransposer composer;
 
+	private float refVel;
+
 	private RaycastHit hit;
 
 	// Start is called before the first frame update
@@ -74,19 +76,43 @@ public class CameraController : MonoBehaviour {
 				minZoom = defaultMinZoom;
 				maxZoom = defaultMaxZoom;
 				scrollSpeed = defaultScrollSpeed;
+
+				if (defaultVolume.weight < 1f) {
+					defaultVolume.weight += .15f * Time.deltaTime;
+
+					if (oceanVolume.weight > 0f) {
+						oceanVolume.weight -= .15f * Time.deltaTime;
+					} else {
+						oceanVolume.weight = 0f;
+					}
+
+					if (forestVolume.weight > 0f) {
+						forestVolume.weight -= .15f * Time.deltaTime;
+					} else {
+						forestVolume.weight = 0f;
+					}
+
+					if (mountainVolume.weight > 0f) {
+						mountainVolume.weight -= .15f * Time.deltaTime;
+					} else {
+						mountainVolume.weight = 0f;
+					}
+				} else {
+					defaultVolume.weight = 1f;
+				}
 			}
 		}
 
-		if (composer.m_CameraDistance < minZoom) {
-			composer.m_CameraDistance += 0.25f * Time.deltaTime;
-		} else if (composer.m_CameraDistance > maxZoom) {
-			composer.m_CameraDistance -= 0.25f * Time.deltaTime;
-		}
+		composer.m_CameraDistance = Mathf.SmoothDamp(composer.m_CameraDistance, maxZoom, ref refVel, 0.5f);
+		//if (composer.m_CameraDistance < minZoom) {
+		//} else if (composer.m_CameraDistance > maxZoom) {
+		//	composer.m_CameraDistance -= 50f * Time.deltaTime;
+		//}
 
-		if (composer.m_CameraDistance >= minZoom && composer.m_CameraDistance <= maxZoom) {
-			composer.m_CameraDistance += Input.GetAxis("Mouse ScrollWheel") * scrollSpeed;
-		} else {
-			composer.m_CameraDistance = Mathf.Clamp(composer.m_CameraDistance, minZoom, maxZoom);
-		}
+		//if (composer.m_CameraDistance >= minZoom && composer.m_CameraDistance <= maxZoom) {
+		//	composer.m_CameraDistance += Input.GetAxis("Mouse ScrollWheel") * scrollSpeed;
+		//} else {
+		//	composer.m_CameraDistance = Mathf.Clamp(composer.m_CameraDistance, minZoom, maxZoom);
+		//}
 	}
 }
