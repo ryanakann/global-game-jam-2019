@@ -5,11 +5,11 @@ using UnityEngine;
 public class Messages
 {
     static string[] goodboys = new string[] {
-
+        "Today was a good day."
     };
 
     static string[] badboys = new string[] {
-
+        "Tough luck..."
     };
 
     public static string Good() {

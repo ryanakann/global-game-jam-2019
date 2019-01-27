@@ -49,6 +49,6 @@ public class Cat : MonoBehaviour
     public void GitGot() {
         Debug.Log("Gottem");
         agent.isStopped = true;
-        SuccessMachine.instance.Succeed(Vector3.zero);
+        SuccessMachine.instance.Succeed();
     }
 }

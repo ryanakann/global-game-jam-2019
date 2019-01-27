@@ -97,7 +97,7 @@ public class DirtPile : MonoBehaviour
     }
 
     void Oof() {
-        DeathMachine.instance.Kill(Vector3.zero);
+        DeathMachine.instance.Kill(LocationMap.instance.mountain.position);
     }
 
     private void OnTriggerEnter(Collider other) {

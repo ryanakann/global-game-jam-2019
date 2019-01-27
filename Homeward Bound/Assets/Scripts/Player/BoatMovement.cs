@@ -63,7 +63,7 @@ public class BoatMovement : MonoBehaviour
         anim.clip = sink;
         anim.Play();
         transform.position = Vector3.MoveTowards(transform.position, offset, 20f);
-        DeathMachine.instance.Kill(Vector3.zero);
+        DeathMachine.instance.Kill(LocationMap.instance.lake.position);
     }
 
     private void OnTriggerEnter(Collider collider)

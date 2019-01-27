@@ -24,7 +24,7 @@ public class DeathMachine : MonoBehaviour
 
     public void Kill(Vector3 respawn_position)
     {
-        Respawner.instance.FadeOut(respawn_position, "Life is hard...");
+        Respawner.instance.FadeOut(respawn_position, Messages.Bad());
         DeathEvent?.Invoke();
     }
 }
