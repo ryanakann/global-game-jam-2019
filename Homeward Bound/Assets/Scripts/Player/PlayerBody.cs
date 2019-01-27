@@ -64,7 +64,8 @@ public class PlayerBody : MonoBehaviour
 
         moving = move;
 
-        anim.SetFloat(speedHash, rb.velocity.magnitude / speed * (crouch ? 0.5f : 1));
+        float clamp_speed = Mathf.Clamp(rb.velocity.magnitude / speed * (crouch ? 0.5f : 1), 0f, 1f);
+        anim.SetFloat(speedHash, clamp_speed);
         anim.SetBool(crouchHash, crouch);
     }
 
