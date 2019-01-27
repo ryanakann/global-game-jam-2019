@@ -75,6 +75,8 @@ public class Nightbringer : MonoBehaviour
     }
 
     IEnumerator FadeToFungus(Location loc) {
+
+        //fade to black
         float timecount = 0f;
 
         while(timecount < fadeTime) {
@@ -91,6 +93,11 @@ public class Nightbringer : MonoBehaviour
 
         //Place Player At Home Here.
 
+        GameObject player = GameObject.FindWithTag("Player");
+
+        player.transform.position = LocationMap.instance.home.position;
+
+        //Fade from black
         float timecount = 0f;
 
         while (timecount < fadeTime)
