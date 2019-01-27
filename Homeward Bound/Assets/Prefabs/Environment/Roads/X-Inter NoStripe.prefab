@@ -9,7 +9,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 100000, guid: b55892b2dacfa7e4d96d562b96508962, type: 3}
       propertyPath: m_Name
-      value: X-Inter
+      value: X-Inter NoStripe
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: b55892b2dacfa7e4d96d562b96508962, type: 3}
       propertyPath: m_LocalPosition.x
@@ -67,5 +67,13 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 18.084606
       objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: b55892b2dacfa7e4d96d562b96508962, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: e4dab043518653443b47f3f6945fd6f4, type: 2}
+    - target: {fileID: 2300000, guid: b55892b2dacfa7e4d96d562b96508962, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 95a780bf66cc73f4490b1f32c0a5467a, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b55892b2dacfa7e4d96d562b96508962, type: 3}
