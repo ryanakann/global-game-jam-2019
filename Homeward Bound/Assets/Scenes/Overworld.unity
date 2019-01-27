@@ -17,7 +17,7 @@ RenderSettings:
   m_Fog: 0
   m_FogColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
   m_FogMode: 3
-  m_FogDensity: 0.01
+  m_FogDensity: 0.005
   m_LinearFogStart: 0
   m_LinearFogEnd: 300
   m_AmbientSkyColor: {r: 0.212, g: 0.227, b: 0.259, a: 1}
@@ -3058,6 +3058,36 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 138207800}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &138558178
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 138558179}
+  m_Layer: 0
+  m_Name: ForestCenter
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &138558179
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 138558178}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -254.1, y: 21.7, z: 79.4}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1822628215}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &147611439
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4470,6 +4500,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1865153448}
     - target: {fileID: 268143091, guid: f09c8554e9b14495b815a674c4e6ce2d, type: 3}
+      propertyPath: m_AfterStackBundles.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 268143091, guid: f09c8554e9b14495b815a674c4e6ce2d, type: 3}
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
@@ -4484,6 +4518,10 @@ PrefabInstance:
     - target: {fileID: 268143091, guid: f09c8554e9b14495b815a674c4e6ce2d, type: 3}
       propertyPath: m_ShowToolkit
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 268143091, guid: f09c8554e9b14495b815a674c4e6ce2d, type: 3}
+      propertyPath: m_AfterStackBundles.Array.data[0].assemblyQualifiedName
+      value: StylizedFog, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
       objectReference: {fileID: 0}
     - target: {fileID: 4024052645519078336, guid: f09c8554e9b14495b815a674c4e6ce2d,
         type: 3}
@@ -4652,6 +4690,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_ConnectedAnchor.z
       value: 0.000007674099
+      objectReference: {fileID: 0}
+    - target: {fileID: 1914194913799348547, guid: f09c8554e9b14495b815a674c4e6ce2d,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.526457
+      objectReference: {fileID: 0}
+    - target: {fileID: 1914194913799348547, guid: f09c8554e9b14495b815a674c4e6ce2d,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.052902628
+      objectReference: {fileID: 0}
+    - target: {fileID: 1914194914383526247, guid: f09c8554e9b14495b815a674c4e6ce2d,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.52649915
+      objectReference: {fileID: 0}
+    - target: {fileID: 1914194914383526247, guid: f09c8554e9b14495b815a674c4e6ce2d,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.041277528
       objectReference: {fileID: 0}
     - target: {fileID: 3263096172079996278, guid: f09c8554e9b14495b815a674c4e6ce2d,
         type: 3}
@@ -8784,7 +8842,7 @@ PrefabInstance:
     - target: {fileID: 6958054092655537416, guid: bf72cf27e4e0d5640a652197adc5c8e9,
         type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6958054092655537416, guid: bf72cf27e4e0d5640a652197adc5c8e9,
         type: 3}
@@ -33728,7 +33786,7 @@ PrefabInstance:
     - target: {fileID: 6958054092655537416, guid: bf72cf27e4e0d5640a652197adc5c8e9,
         type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6958054092655537416, guid: bf72cf27e4e0d5640a652197adc5c8e9,
         type: 3}
@@ -39990,7 +40048,7 @@ PrefabInstance:
     - target: {fileID: 6958054092655537416, guid: bf72cf27e4e0d5640a652197adc5c8e9,
         type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6958054092655537416, guid: bf72cf27e4e0d5640a652197adc5c8e9,
         type: 3}
@@ -40243,6 +40301,56 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1822566147}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1822628214
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1822628215}
+  - component: {fileID: 1822628216}
+  m_Layer: 0
+  m_Name: ForestPostProcessing
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1822628215
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1822628214}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -42.62863, y: 30.561554, z: 266.48883}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 138558179}
+  - {fileID: 2047010403}
+  m_Father: {fileID: 0}
+  m_RootOrder: 22
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1822628216
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1822628214}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe65998e7773a43b4b190c5bab5563b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 197461993}
+  forestStart: {fileID: 2047010403}
+  forestCenter: {fileID: 138558179}
+  defaultVolume: {fileID: 80294844}
+  forestVolume: {fileID: 1865153448}
 --- !u!1001 &1822824744
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -41503,7 +41611,7 @@ MonoBehaviour:
   sharedProfile: {fileID: 11400000, guid: 4a8354409b62d44748059c908502df36, type: 2}
   isGlobal: 1
   blendDistance: 0
-  weight: 1
+  weight: 0
   priority: 0
 --- !u!1001 &1866390237
 PrefabInstance:
@@ -44549,6 +44657,36 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 2045500499}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2047010402
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2047010403}
+  m_Layer: 0
+  m_Name: ForestEntrance
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2047010403
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2047010402}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -68.8, y: 21.7, z: 7.3}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1822628215}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2050331845
 PrefabInstance:
   m_ObjectHideFlags: 0

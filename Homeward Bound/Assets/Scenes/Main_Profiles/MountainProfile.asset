@@ -84,7 +84,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d65e486e4de6e5448a8fbb43dc8756a0, type: 3}
   m_Name: Grain
   m_EditorClassIdentifier: 
-  active: 1
+  active: 0
   enabled:
     overrideState: 1
     value: 1
@@ -174,11 +174,11 @@ MonoBehaviour:
     overrideState: 0
     value: 1
   temperature:
-    overrideState: 0
+    overrideState: 1
     value: 0
   tint:
     overrideState: 0
-    value: 0
+    value: -54
   colorFilter:
     overrideState: 0
     value: {r: 1, g: 1, b: 1, a: 1}
@@ -199,7 +199,7 @@ MonoBehaviour:
     value: 0
   mixerRedOutRedIn:
     overrideState: 1
-    value: 100
+    value: 125
   mixerRedOutGreenIn:
     overrideState: 1
     value: 0
@@ -207,32 +207,32 @@ MonoBehaviour:
     overrideState: 1
     value: 0
   mixerGreenOutRedIn:
-    overrideState: 0
+    overrideState: 1
     value: 0
   mixerGreenOutGreenIn:
-    overrideState: 0
+    overrideState: 1
     value: 100
   mixerGreenOutBlueIn:
-    overrideState: 0
+    overrideState: 1
     value: 0
   mixerBlueOutRedIn:
-    overrideState: 0
+    overrideState: 1
     value: 0
   mixerBlueOutGreenIn:
-    overrideState: 0
+    overrideState: 1
     value: 0
   mixerBlueOutBlueIn:
-    overrideState: 0
+    overrideState: 1
     value: 100
   lift:
     overrideState: 1
-    value: {x: 1, y: 0.7230082, z: 0.90148246, w: 0.0000000014304273}
+    value: {x: 1, y: 1, z: 1, w: 0}
   gamma:
     overrideState: 1
-    value: {x: 0.41449457, y: 1, z: 0.3151632, w: -0.0000000052853504}
+    value: {x: 1, y: 1, z: 1, w: 0}
   gain:
     overrideState: 1
-    value: {x: 1, y: 1, z: 1, w: 0.01620745}
+    value: {x: 1, y: 1, z: 1, w: 0}
   masterCurve:
     overrideState: 0
     value:
@@ -1617,7 +1617,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40b924e2dad56384a8df2a1e111bb675, type: 3}
   m_Name: Vignette
   m_EditorClassIdentifier: 
-  active: 1
+  active: 0
   enabled:
     overrideState: 1
     value: 1
