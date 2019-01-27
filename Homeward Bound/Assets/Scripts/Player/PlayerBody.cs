@@ -14,7 +14,7 @@ public class PlayerBody : MonoBehaviour
     int speedHash, crouchHash;
 
     [HideInInspector]public float speed = 20f;
-    float ground_dist = 0.01f;
+    float ground_dist = 0.1f;
     Collider body_collider;
 
     public bool moving;
@@ -30,6 +30,8 @@ public class PlayerBody : MonoBehaviour
         speedHash = Animator.StringToHash("Speed");
         crouchHash = Animator.StringToHash("Crouching");
         body_collider = GetComponent<Collider>();
+        DeathScreen.instance.DeathEvent += Die;
+        DeathScreen.instance.LifeEvent += Live;
     }
 
     private void Update() {
@@ -93,13 +95,16 @@ public class PlayerBody : MonoBehaviour
         }
     }
 
-    /*
-    private void OnCollisionEnter(Collision collision)
+    public void Die()
     {
-        if (collision.contacts[0].thisCollider == body_collider)
-        {
-            rb.velocity -= Vector3.Dot(rb.velocity, collision.contacts[0].normal) * collision.contacts[0].normal;
-        }
+        //become a ragdoll bitch
+        PlayerInput.allowMovement = false;
+        DeathScreen.instance.OnDeath();
     }
-    */
+
+    public void Live()
+    {
+        //unbecome a ragdoll bitch
+        PlayerInput.allowMovement = true;
+    }
 }
