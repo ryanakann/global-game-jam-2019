@@ -10,6 +10,7 @@ public class TriggerMountain : MonoBehaviour {
 	public MorphTerrain morphTerrain;
 	public CinemachineVirtualCamera virtualCamera;
 	private CinemachineTrackedDolly dolly;
+	public AudioClip mountainTriggerAudio;
 	public float cutsceneLength;
 
 	private float currentVelocity;
@@ -33,6 +34,7 @@ public class TriggerMountain : MonoBehaviour {
 				morphTerrain.Lerp(0.75f / cutsceneLength);
 				StartCoroutine(FollowDolly());
 				StartCoroutine(FadeVolumes());
+				Fungus.MusicManager.instance.PlayMusic(mountainTriggerAudio, true, 1f, 0f);
 			}
 		}
 

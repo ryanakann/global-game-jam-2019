@@ -8,7 +8,7 @@ public class CameraController : MonoBehaviour {
 	public Transform player;
 	public LayerMask mask;
 	public string ground;
-	private string groundLF;
+	public string groundLF;
 	public float secondsPerTransition = 5f;
 	private float transitionsPerSecond;
 
@@ -89,6 +89,7 @@ public class CameraController : MonoBehaviour {
 				}
 
 				if (ground != groundLF) {
+					print("Ocean");
 					Fungus.MusicManager.instance.PlayMusic(oceanMusic, true, 5f, 0f);
 				}
 			} else if (hit.transform.name.Equals("Mountain")) {
@@ -112,6 +113,7 @@ public class CameraController : MonoBehaviour {
 				}
 
 				if (ground != groundLF) {
+					print("Mountain");
 					Fungus.MusicManager.instance.PlayMusic(mountainMusic, true, 5f, 0f);
 				}
 
@@ -136,7 +138,8 @@ public class CameraController : MonoBehaviour {
 				}
 
 				if (ground != groundLF) {
-					Fungus.MusicManager.instance.PlayMusic(defaultMusic, true, 5f, 0f);
+					print("Forest");
+					Fungus.MusicManager.instance.PlayMusic(forestMusic, true, 5f, 0f);
 				}
 			} else {
 				ground = "Default";
@@ -171,6 +174,7 @@ public class CameraController : MonoBehaviour {
 				}
 
 				if (ground != groundLF) {
+					print("Default");
 					Fungus.MusicManager.instance.PlayMusic(defaultMusic, true, 5f, 0f);
 				}
 			}
