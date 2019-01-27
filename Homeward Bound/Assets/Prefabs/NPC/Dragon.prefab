@@ -1723,8 +1723,9 @@ MonoBehaviour:
     width: 1114
     height: 859
   selectedBlocks:
-  - {fileID: 8260451172102459593}
-  selectedCommands: []
+  - {fileID: 3304388479436361205}
+  selectedCommands:
+  - {fileID: 155112937960653250}
   variables:
   - {fileID: 304731743960957045}
   - {fileID: 221614122987472961}
@@ -2481,7 +2482,7 @@ MonoBehaviour:
   variable: {fileID: 304731743960957045}
   booleanData:
     booleanRef: {fileID: 0}
-    booleanVal: 0
+    booleanVal: 1
   integerData:
     integerRef: {fileID: 0}
     integerVal: 0
