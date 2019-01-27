@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8343711ebc685774fad1dabc63df62dc, type: 3}
   m_Name: Flag
   m_EditorClassIdentifier: 
-  sprite: {fileID: 0}
+  sprite: {fileID: 21300000, guid: 988cd34fc96bc5e4abaecc726ccabca0, type: 3}
   obj: {fileID: 196746172646600284, guid: 5f18490286d58f54b820cf99ed2fe00d, type: 3}
   id: 2
   header: Flag

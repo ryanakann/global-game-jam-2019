@@ -6,6 +6,7 @@ public class BoatMovement : MonoBehaviour
 {
     Rigidbody rb;
 
+    bool dead = false;
     public bool move;   //If true, allow boat to move and rotate
 
     public float speed;
@@ -33,5 +34,27 @@ public class BoatMovement : MonoBehaviour
         {
             rb.velocity = Vector3.zero;
         }
+        if(dead)
+        {
+            move = false;
+            rb.velocity = -1 * Vector3.up;
+        }
     }
+
+    public void Sink()
+    {
+        dead = true;
+    }
+
+    public void StopMoving()
+    {
+        move = false;
+    }
+
+    public void StartMoving()
+    {
+        move = true;
+    }
+
+
 }

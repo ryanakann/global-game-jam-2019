@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8343711ebc685774fad1dabc63df62dc, type: 3}
   m_Name: Flashlight
   m_EditorClassIdentifier: 
-  sprite: {fileID: 0}
+  sprite: {fileID: 21300000, guid: 87d62803ca7ba9442a304f70847baf54, type: 3}
   obj: {fileID: 196746172646600284, guid: fe7cb6700fee3a84aae81220d6a515c3, type: 3}
   id: 1
   header: Flashlight

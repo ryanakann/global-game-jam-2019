@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8343711ebc685774fad1dabc63df62dc, type: 3}
   m_Name: Baseball
   m_EditorClassIdentifier: 
-  sprite: {fileID: 0}
+  sprite: {fileID: 21300000, guid: f81e506e272f7b94cb87a8cf735d80c2, type: 3}
   obj: {fileID: 196746172646600284, guid: 5078759311fbe994084b94194d66211b, type: 3}
   id: 4
   header: Mouldy Baseball

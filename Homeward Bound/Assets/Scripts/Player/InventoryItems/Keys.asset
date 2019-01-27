@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8343711ebc685774fad1dabc63df62dc, type: 3}
   m_Name: Keys
   m_EditorClassIdentifier: 
-  sprite: {fileID: 0}
+  sprite: {fileID: 21300000, guid: f806599f8d0ff194dbc722dee613e76a, type: 3}
   obj: {fileID: 196746172646600284, guid: ff0a9f7d75c166b48802fc9b0034c69a, type: 3}
   id: 5
   header: Keys

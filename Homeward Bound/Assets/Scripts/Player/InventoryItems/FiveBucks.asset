@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8343711ebc685774fad1dabc63df62dc, type: 3}
   m_Name: FiveBucks
   m_EditorClassIdentifier: 
-  sprite: {fileID: 0}
+  sprite: {fileID: 21300000, guid: e1867acebe60df84a88acc43059815ff, type: 3}
   obj: {fileID: 196746172646600284, guid: 69a91bad28322764280f5389c0a300d2, type: 3}
   id: 3
   header: $5
