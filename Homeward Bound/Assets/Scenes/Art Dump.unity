@@ -165,7 +165,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!108 &307298654
 Light:
   m_ObjectHideFlags: 0
@@ -886,10 +886,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.3065
       objectReference: {fileID: 0}
-    - target: {fileID: 9500000, guid: 392330405dc778744987d7f26f1f1b74, type: 3}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 9100000, guid: 8b1c40631bf9a464280a7f173ce390a1, type: 2}
     - target: {fileID: 400026, guid: 392330405dc778744987d7f26f1f1b74, type: 3}
       propertyPath: m_LocalRotation.x
       value: 0.99893916
@@ -938,6 +934,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.x
       value: 1.664
       objectReference: {fileID: 0}
+    - target: {fileID: 9500000, guid: 392330405dc778744987d7f26f1f1b74, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 8b1c40631bf9a464280a7f173ce390a1, type: 2}
     - target: {fileID: 13700000, guid: 392330405dc778744987d7f26f1f1b74, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -1418,7 +1418,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!81 &1313750365
 AudioListener:
   m_ObjectHideFlags: 0

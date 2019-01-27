@@ -14,6 +14,7 @@ public class PlayerBody : MonoBehaviour
     int speedHash, crouchHash;
 
     [HideInInspector]public float speed = 20f;
+    float ground_dist = 0.5f;
 
     public bool moving;
 
@@ -29,10 +30,21 @@ public class PlayerBody : MonoBehaviour
         crouchHash = Animator.StringToHash("Crouching");
     }
 
+    private void Update() {
+        RaycastHit hit;
+        if (!Physics.Raycast(transform.position, Vector3.down, out hit, ground_dist))
+        {
+            rb.drag = 0f;
+        }
+        else
+        {
+            rb.drag = 10f;
+        }
+    }
+
     public void Move(bool move, Vector3 dir, bool crouch)   //Moves player in the direction of dir at speed 
     {
 		dirGizmo = dir;
-        Debug.Log(dir.magnitude);
         if (move)
         {
             if (rb.velocity != Vector3.zero)
