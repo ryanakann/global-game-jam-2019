@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3609106680952519936}
   - component: {fileID: 3609106680952519939}
   m_Layer: 0
-  m_Name: WalkingNPC
+  m_Name: WalkingNPC Var1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -545,6 +545,11 @@ PrefabInstance:
       propertyPath: m_RootBone
       value: 
       objectReference: {fileID: 6419260655277315412}
+    - target: {fileID: 3521909221956442165, guid: c8d4c97fea196b649b631e1ecfc9c1bb,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6128ef6b80f1ef94dbee575c304043cf, type: 2}
     - target: {fileID: 3521909221956442169, guid: c8d4c97fea196b649b631e1ecfc9c1bb,
         type: 3}
       propertyPath: m_Bones.Array.data[0]
@@ -645,6 +650,11 @@ PrefabInstance:
       propertyPath: m_RootBone
       value: 
       objectReference: {fileID: 6419260655277315412}
+    - target: {fileID: 3521909221956442169, guid: c8d4c97fea196b649b631e1ecfc9c1bb,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: b476779f0d33161488168823a9422846, type: 2}
     - target: {fileID: 3521909221956442171, guid: c8d4c97fea196b649b631e1ecfc9c1bb,
         type: 3}
       propertyPath: m_Bones.Array.data[0]

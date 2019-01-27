@@ -7,6 +7,7 @@ TagManager:
   - UICanvas
   - Virtual Cam
   - Crashable
+  - Item
   layers:
   - Default
   - TransparentFX
