@@ -1,17 +1,25 @@
 fileFormatVersion: 2
-guid: 3b0c3bd0740abc04c8e8b945bbe4f484
+guid: f147e7c1dd8287a4aad22a8856c9a14a
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
     100000: //RootNode
     400000: //RootNode
-    2100000: MoneyMaterial
+    2100000: Wood
+    2100002: WhiteStripes
+    2100004: OrangeStripes
+    2100006: WhiteStripes.001
+    2100008: OrangeStripes.001
+    2100010: WhiteStripes.002
+    2100012: OrangeStripes.002
+    2100014: WhiteStripes.003
+    2100016: OrangeStripes.003
     2300000: //RootNode
     3300000: //RootNode
     4300000: Cube
   externalObjects: {}
   materials:
-    importMaterials: 0
+    importMaterials: 1
     materialName: 0
     materialSearch: 1
     materialLocation: 1

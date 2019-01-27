@@ -1,11 +1,12 @@
 fileFormatVersion: 2
-guid: 3b0c3bd0740abc04c8e8b945bbe4f484
+guid: c989df2f242314442b58f57b836ab412
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
     100000: //RootNode
     400000: //RootNode
-    2100000: MoneyMaterial
+    2100000: Orange
+    2100002: WhiteStripes
     2300000: //RootNode
     3300000: //RootNode
     4300000: Cube
