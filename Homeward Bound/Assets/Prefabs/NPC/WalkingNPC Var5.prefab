@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3609106680952519936}
   - component: {fileID: 3609106680952519939}
   m_Layer: 0
-  m_Name: WalkingNPC
+  m_Name: WalkingNPC Var5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -645,6 +645,16 @@ PrefabInstance:
       propertyPath: m_RootBone
       value: 
       objectReference: {fileID: 6419260655277315412}
+    - target: {fileID: 3521909221956442169, guid: c8d4c97fea196b649b631e1ecfc9c1bb,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: fb619967c00e46a4289e023380116cf5, type: 2}
+    - target: {fileID: 3521909221956442169, guid: c8d4c97fea196b649b631e1ecfc9c1bb,
+        type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: d3b78237e3577ca43b09e5251dc4eb0d, type: 2}
     - target: {fileID: 3521909221956442171, guid: c8d4c97fea196b649b631e1ecfc9c1bb,
         type: 3}
       propertyPath: m_Bones.Array.data[0]
@@ -745,6 +755,11 @@ PrefabInstance:
       propertyPath: m_RootBone
       value: 
       objectReference: {fileID: 6419260655277315412}
+    - target: {fileID: 3521909221956442171, guid: c8d4c97fea196b649b631e1ecfc9c1bb,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: b2b813b8ea0fc1647aa94c98b07f3f82, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c8d4c97fea196b649b631e1ecfc9c1bb, type: 3}
 --- !u!4 &6419260655277315428 stripped

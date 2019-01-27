@@ -7,7 +7,7 @@ public class WalkingNPC : MonoBehaviour
     //NPC Will walk through all nodes then back to starting point in a loop
     public Transform[] nodes;
     int currentNode = 0;
-
+    Animator anim;
     Rigidbody rb;
 
     public float speed;
@@ -16,11 +16,13 @@ public class WalkingNPC : MonoBehaviour
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
+        anim = GetComponentInChildren<Animator>();
         transform.LookAt(nodes[currentNode]);
     }
 
     private void Update()
     {
+        anim.SetFloat("Speed", move?speed:0);
         if (move)
         {
             rb.velocity = transform.forward * speed;
