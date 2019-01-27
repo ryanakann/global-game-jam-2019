@@ -2,24 +2,22 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+public enum ActionID { Dance }
+
 public class Item : MonoBehaviour
 {
+    protected static bool picked_up = false;
+
     public ItemID id;
+    public ActionID actionID;
     public InventoryItem invItem;
     [HideInInspector] public bool equipped;
-
-
-
-    private void OnCollisionEnter(Collision collision)
-    {
-        if (!equipped && collision.gameObject.CompareTag("Player"))
-        {
-            PickUp();
-        }
-    }
+    public PlayerBody holder;
 
     public void PickUp()
     {
+        picked_up = true;
+
         Inventory.instance.AddItem(invItem);
 
         Destroy(gameObject);
@@ -27,6 +25,5 @@ public class Item : MonoBehaviour
 
     public virtual void Use()
     {
-        
     }
 }
