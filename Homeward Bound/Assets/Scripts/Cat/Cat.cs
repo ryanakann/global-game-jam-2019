@@ -45,4 +45,9 @@ public class Cat : MonoBehaviour
         current = target;
         current.TriggerEvent += Flee;
     }
+
+    public void GitGot() {
+        Debug.Log("Gottem");
+        agent.isStopped = true;
+    }
 }
