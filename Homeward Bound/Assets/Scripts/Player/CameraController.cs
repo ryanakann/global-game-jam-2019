@@ -139,7 +139,7 @@ public class CameraController : MonoBehaviour {
 
 				if (ground != groundLF) {
 					print("Forest");
-					Fungus.MusicManager.instance.PlayMusic(defaultMusic, true, 5f, 0f);
+					Fungus.MusicManager.instance.PlayMusic(forestMusic, true, 5f, 0f);
 				}
 			} else {
 				ground = "Default";
