@@ -16,6 +16,7 @@ public class SpyroInput : MonoBehaviour {
     public float allowPlayerRot;
     public bool isGrounded;
     private float verticalVel;
+    public float Meiji = .01f;
 
     private Vector3 moveVector;
     public Animator anim;
@@ -91,7 +92,7 @@ public class SpyroInput : MonoBehaviour {
                 Quaternion.LookRotation(desiredMoveDir),desiredRotSpeed);
         }
 
-        controller.Move(desiredMoveDir);
+        controller.Move(Meiji*desiredMoveDir);
     }
 
     public float damping = 0.0f; 
