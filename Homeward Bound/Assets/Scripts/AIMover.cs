@@ -9,6 +9,7 @@ public class AIMover : MonoBehaviour
     Animator anim;
     NavMeshAgent agent;
     int speedHash;
+	int canMoveHash;
 
     public bool can_move;
 
@@ -18,6 +19,7 @@ public class AIMover : MonoBehaviour
         agent = GetComponent<NavMeshAgent>();
         anim = GetComponentInChildren<Animator>();
         speedHash = Animator.StringToHash("Speed");
+		canMoveHash = Animator.StringToHash("CanMove");
     }
 
     // Update is called once per frame
@@ -28,5 +30,7 @@ public class AIMover : MonoBehaviour
             float speed = Mathf.Clamp(agent.velocity.magnitude / agent.speed, 0f, 1f);
             anim.SetFloat(speedHash, speed);
         }
-    }
+
+		anim.SetBool(canMoveHash, can_move);
+	}
 }

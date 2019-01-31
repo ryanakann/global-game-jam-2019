@@ -11127,18 +11127,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8355f88015c84870889e93ba6261be5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Name: 
-  m_EditorClassIdentifier: 
-  terrain: {fileID: 222781829}
-  offset: {x: 100, y: 200, z: 200}
 --- !u!114 &222781827
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -47341,18 +47329,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8355f88015c84870889e93ba6261be5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Name: 
-  m_EditorClassIdentifier: 
-  terrain: {fileID: 900702850}
-  offset: {x: 100, y: 200, z: 100}
 --- !u!1001 &903229976
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -86066,18 +86042,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8355f88015c84870889e93ba6261be5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Name: 
-  m_EditorClassIdentifier: 
-  terrain: {fileID: 1678055645}
-  offset: {x: 100, y: 200, z: 100}
 --- !u!114 &1678055649
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -88490,18 +88454,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8355f88015c84870889e93ba6261be5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Name: 
-  m_EditorClassIdentifier: 
-  terrain: {fileID: 1720476592}
-  offset: {x: 100, y: 200, z: 200}
 --- !u!114 &1720476596
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -97075,6 +97027,56 @@ PrefabInstance:
       propertyPath: m_Name
       value: OldMan
       objectReference: {fileID: 0}
+    - target: {fileID: 4226955660954393057, guid: b23236e91be8b49f485b0aa058e7d8e3,
+        type: 3}
+      propertyPath: commandList.Array.size
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4226955660954393057, guid: b23236e91be8b49f485b0aa058e7d8e3,
+        type: 3}
+      propertyPath: blockName
+      value: Proposition
+      objectReference: {fileID: 0}
+    - target: {fileID: 4226955660954393057, guid: b23236e91be8b49f485b0aa058e7d8e3,
+        type: 3}
+      propertyPath: commandList.Array.data[7]
+      value: 
+      objectReference: {fileID: 1342293255}
+    - target: {fileID: 4226955660954393057, guid: b23236e91be8b49f485b0aa058e7d8e3,
+        type: 3}
+      propertyPath: commandList.Array.data[0]
+      value: 
+      objectReference: {fileID: 1342293246}
+    - target: {fileID: 4226955660954393057, guid: b23236e91be8b49f485b0aa058e7d8e3,
+        type: 3}
+      propertyPath: commandList.Array.data[1]
+      value: 
+      objectReference: {fileID: 1342293269}
+    - target: {fileID: 4226955660954393057, guid: b23236e91be8b49f485b0aa058e7d8e3,
+        type: 3}
+      propertyPath: commandList.Array.data[2]
+      value: 
+      objectReference: {fileID: 1342293268}
+    - target: {fileID: 4226955660954393057, guid: b23236e91be8b49f485b0aa058e7d8e3,
+        type: 3}
+      propertyPath: commandList.Array.data[3]
+      value: 
+      objectReference: {fileID: 1342293267}
+    - target: {fileID: 4226955660954393057, guid: b23236e91be8b49f485b0aa058e7d8e3,
+        type: 3}
+      propertyPath: commandList.Array.data[4]
+      value: 
+      objectReference: {fileID: 1342293266}
+    - target: {fileID: 4226955660954393057, guid: b23236e91be8b49f485b0aa058e7d8e3,
+        type: 3}
+      propertyPath: commandList.Array.data[5]
+      value: 
+      objectReference: {fileID: 1342293265}
+    - target: {fileID: 4226955660954393057, guid: b23236e91be8b49f485b0aa058e7d8e3,
+        type: 3}
+      propertyPath: commandList.Array.data[6]
+      value: 
+      objectReference: {fileID: 1342293261}
     - target: {fileID: 1062826512678426602, guid: b23236e91be8b49f485b0aa058e7d8e3,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -97200,56 +97202,6 @@ PrefabInstance:
       propertyPath: m_Radius
       value: 7
       objectReference: {fileID: 0}
-    - target: {fileID: 4226955660954393057, guid: b23236e91be8b49f485b0aa058e7d8e3,
-        type: 3}
-      propertyPath: commandList.Array.size
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 4226955660954393057, guid: b23236e91be8b49f485b0aa058e7d8e3,
-        type: 3}
-      propertyPath: blockName
-      value: Proposition
-      objectReference: {fileID: 0}
-    - target: {fileID: 4226955660954393057, guid: b23236e91be8b49f485b0aa058e7d8e3,
-        type: 3}
-      propertyPath: commandList.Array.data[7]
-      value: 
-      objectReference: {fileID: 1342293255}
-    - target: {fileID: 4226955660954393057, guid: b23236e91be8b49f485b0aa058e7d8e3,
-        type: 3}
-      propertyPath: commandList.Array.data[0]
-      value: 
-      objectReference: {fileID: 1342293246}
-    - target: {fileID: 4226955660954393057, guid: b23236e91be8b49f485b0aa058e7d8e3,
-        type: 3}
-      propertyPath: commandList.Array.data[1]
-      value: 
-      objectReference: {fileID: 1342293269}
-    - target: {fileID: 4226955660954393057, guid: b23236e91be8b49f485b0aa058e7d8e3,
-        type: 3}
-      propertyPath: commandList.Array.data[2]
-      value: 
-      objectReference: {fileID: 1342293268}
-    - target: {fileID: 4226955660954393057, guid: b23236e91be8b49f485b0aa058e7d8e3,
-        type: 3}
-      propertyPath: commandList.Array.data[3]
-      value: 
-      objectReference: {fileID: 1342293267}
-    - target: {fileID: 4226955660954393057, guid: b23236e91be8b49f485b0aa058e7d8e3,
-        type: 3}
-      propertyPath: commandList.Array.data[4]
-      value: 
-      objectReference: {fileID: 1342293266}
-    - target: {fileID: 4226955660954393057, guid: b23236e91be8b49f485b0aa058e7d8e3,
-        type: 3}
-      propertyPath: commandList.Array.data[5]
-      value: 
-      objectReference: {fileID: 1342293265}
-    - target: {fileID: 4226955660954393057, guid: b23236e91be8b49f485b0aa058e7d8e3,
-        type: 3}
-      propertyPath: commandList.Array.data[6]
-      value: 
-      objectReference: {fileID: 1342293261}
     - target: {fileID: 4226955660954393087, guid: b23236e91be8b49f485b0aa058e7d8e3,
         type: 3}
       propertyPath: targetBlock
