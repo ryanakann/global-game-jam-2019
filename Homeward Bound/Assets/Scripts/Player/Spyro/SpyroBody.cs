@@ -3,8 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class SpyroBody : MonoBehaviour {
-
-    Rigidbody rb;
+    
     Item equipped_item;
     public Transform hand;
 
@@ -19,7 +18,6 @@ public class SpyroBody : MonoBehaviour {
     public bool moving;
 
     private void Start() {
-        rb = GetComponent<Rigidbody>();
         Inventory.instance.EquipEvent += Equip;
         if (!anim)
             anim = GetComponent<Animator>();
@@ -35,12 +33,7 @@ public class SpyroBody : MonoBehaviour {
     }
 
     private void Update() {
-        if (!Physics.Raycast(transform.position,Vector3.down, 
-            out RaycastHit hit, ground_dist)) {
-            rb.drag = 0f;
-        } else {
-            rb.drag = 8f;
-        }
+
     }
 
     public void Use() {
