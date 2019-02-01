@@ -68,6 +68,8 @@ public class SpyroInput : MonoBehaviour {
             } else {
                 verticalVel -= 2;
             }
+            Debug.Log("GROUND: " + controller.isGrounded);
+            anim.SetBool("IsGrounded", isGrounded);
 
             moveVector = new Vector3(0,verticalVel,0);
             controller.Move(moveVector);
