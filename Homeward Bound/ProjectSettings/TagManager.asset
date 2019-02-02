@@ -8,6 +8,7 @@ TagManager:
   - Virtual Cam
   - Crashable
   - Item
+  - ItemActivator
   layers:
   - Default
   - TransparentFX

@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-namespace HomewardBound {
+namespace AroundTheBend {
     [System.Serializable]
     public class BendingSegment {
         public Transform firstTransform;
@@ -26,6 +26,9 @@ namespace HomewardBound {
         public float effect = 0;
     }
 
+    /// <summary>
+    /// Modified by Julian K
+    /// </summary>
     public class HeadController : MonoBehaviour {
 
         public Transform rootNode;
