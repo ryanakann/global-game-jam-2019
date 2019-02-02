@@ -2,7 +2,18 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum ItemID { Hand, Flashlight, Flag, FiveBucks, Baseball, Keys, CatFood, Cat, Leaves }
+public enum ItemID {
+    Hand,
+    Flashlight,
+    Flag,
+    FiveBucks,
+    Baseball,
+    Keys,
+    CatFood,
+    Cat,
+    Leaves,
+    Stick,
+}
 
 [CreateAssetMenu(fileName = "Data", menuName = "Inventory/List", order = 1)]
 public class InventoryItem : ScriptableObject

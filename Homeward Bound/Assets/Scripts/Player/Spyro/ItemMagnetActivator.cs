@@ -33,7 +33,12 @@ namespace AroundTheBend {
 
         // Update is called once per frame
         void Update () {
-            
+
         }
+
+        //private void OnDrawGizmos () {
+        //    Gizmos.color = new Color(1, 0, 0, 0.25f);
+        //    Gizmos.DrawSphere(transform.position + col.center, col.radius);
+        //}
     }
 }

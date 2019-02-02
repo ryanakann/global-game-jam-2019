@@ -7,7 +7,6 @@ namespace AroundTheBend {
     /// Written by Julian K
     /// </summary>
     public class SpyroInput : MonoBehaviour {
-        public GameObject headband;
 
         SpyroBody body;
         bool crouch;
@@ -30,6 +29,7 @@ namespace AroundTheBend {
         public static bool allowMovement = true;
 
         private void Start () {
+            body = GetComponent<SpyroBody>();
             controller = GetComponent<CharacterController>();
             cam = Camera.main;
 
@@ -37,11 +37,6 @@ namespace AroundTheBend {
 
         private void Update () {
             if (Input.GetButtonDown("Use")) {
-
-            }
-
-            if (Input.GetButtonDown("Headband")) {
-                headband.SetActive(!headband.activeSelf);
 
             }
 
@@ -72,8 +67,6 @@ namespace AroundTheBend {
                 } else {
                     verticalVel -= 2;
                 }
-                Debug.Log("GROUND: " + controller.isGrounded);
-                anim.SetBool("IsGrounded", isGrounded);
 
                 moveVector = new Vector3(0, verticalVel, 0);
                 controller.Move(moveVector);
@@ -121,8 +114,7 @@ namespace AroundTheBend {
 
         private void OnDrawGizmos () {
             Gizmos.color = Color.black;
-            Gizmos.DrawRay(transform.position, new Vector3(Input.GetAxis("Horizontal"),
-                0f, Input.GetAxis("Vertical")) * 5f);
+            Gizmos.DrawRay(transform.position, desiredMoveDir * 5f);
         }
     }
 }

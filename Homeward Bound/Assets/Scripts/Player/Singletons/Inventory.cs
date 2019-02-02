@@ -14,6 +14,8 @@ public class Inventory : MonoBehaviour
 
     public EquipDel EquipEvent;
 
+    public int FictionPoints;
+
     private void Awake()
     {
         if (!instance) {
@@ -45,7 +47,9 @@ public class Inventory : MonoBehaviour
 
     public void Open()
     {
-        inventory_frame_panel.SetActive(!inventory_frame_panel.activeSelf);
+        if (!inventory_frame_panel.activeSelf)
+            inventory_frame_panel.SetActive(true);
+        else inventory_frame_panel.GetComponent<Animator>().SetTrigger("Hide");
     }
 
     public bool HasItem(ItemID id)

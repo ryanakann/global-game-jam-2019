@@ -4,6 +4,8 @@ using UnityEngine;
 
 namespace AroundTheBend {
 
+    public delegate void ToggleFantasy ();
+
     /// <summary>
     /// Toggles objects between their real and fantasy counterparts
     /// Written by Julian K;
@@ -11,6 +13,7 @@ namespace AroundTheBend {
     public class FantasyToggler : MonoBehaviour {
 
         public static FantasyToggler instance;
+        public ToggleFantasy FantasyToggleEvent;
 
         private void Awake () {
             if (instance != null) {
@@ -28,7 +31,9 @@ namespace AroundTheBend {
 
         // Update is called once per frame
         void Update () {
-
+            if (Input.GetButtonDown("Headband")) {
+                FantasyToggleEvent?.Invoke();
+            }
         }
     }
 }
