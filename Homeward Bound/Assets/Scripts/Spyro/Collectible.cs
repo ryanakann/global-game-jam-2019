@@ -6,10 +6,11 @@ namespace AroundTheBend {
     /// <summary>
     /// Written by Julian K
     /// </summary>
-    public class Collectable : MonoBehaviour {
+    public class Collectible : MonoBehaviour {
 
         public Animator anim;
         public Rigidbody rb;
+        public CollectableData data;
 
         private SphereCollider sc;
 
@@ -23,7 +24,14 @@ namespace AroundTheBend {
         public float SpawnCooldown = 1f;
         private float SpawnTime;
 
-        private readonly float epsilon = 0.011f;
+        private Vector3 Center {
+            get {
+                return ItemMagnetActivator.instance.transform.position - 
+                    ItemMagnetActivator.instance.VerticalOffset * Vector3.up;
+            }
+        }
+
+        //private readonly float epsilon = 0.011f;
         
         void Start () {
             SpawnTime = SpawnCooldown;
@@ -36,35 +44,32 @@ namespace AroundTheBend {
             if(IsReady && withinActivator && !Activated)
                 Activate();
             
-
             // if the magnet has triggered the collectable, 
             // move this gameobject towards the activator
             if (Activated) {
+                ItemMagnetActivator ima = ItemMagnetActivator.instance;
                 transform.position = Vector3.Lerp(transform.position,
-                    ItemMagnetActivator.instance.transform.position, Time.deltaTime);
-                //if(Vector3.Distance(transform.position, 
-                //    ItemMagnetActivator.instance.transform.position) <= epsilon
-                //     && !killing) {
-                //}
+                    Center, ima.Speed * Time.deltaTime);
+                if (Vector3.Distance(transform.position,
+                    ima.transform.position) <= ima.KillRadius
+                     && !killing) {
+                    Kill();
+                }
             }
         }
 
         private void OnTriggerEnter (Collider collision) {
             if (collision.CompareTag("ItemActivator")) {
                 withinActivator = true;
-                print("WITHIN");
+                //print("WITHIN");
                 if (IsReady) {
                     Activate();
                 }
-            } if (collision.CompareTag("Player") && Activated) {
-                print("KILL!");
-                killing = true;
-
-                // kill the item with an animation, 
-                // if one exists
-                if (anim != null) anim.SetTrigger("Kill");
-                else Destroy(gameObject);
             }
+
+            //if (collision.CompareTag("Player") && Activated) {
+            //    Kill();
+            //}
         }
 
         private void OnTriggerExit (Collider collision) {
@@ -74,8 +79,22 @@ namespace AroundTheBend {
             }
         }
 
-        private void Activate () {
+        /// <summary>
+        /// Kill The object
+        /// </summary>
+        private void Kill () {
+            //print("KILL!");
+            killing = true;
 
+            data?.Collect();
+
+            // kill the item with an animation, 
+            // if one exists
+            if (anim != null) anim.SetTrigger("Kill");
+            else Destroy(gameObject);
+        }
+
+        private void Activate () {
             Activated = true;
             // disable the rigidbody if one exists
             if (rb != null) rb.isKinematic = true;

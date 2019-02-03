@@ -41,6 +41,7 @@ namespace AroundTheBend {
     public class HUD : MonoBehaviour {
 
         public static HUD instance;
+        public float tranSpeed = 1.5f;
         
         [Header("Sections")]
         public Section FictionPointsObject;
@@ -49,6 +50,7 @@ namespace AroundTheBend {
 
         [Header("Values")]
         public TextMeshProUGUI FPText;
+        public TextMeshProUGUI LVText;
 
         private void Awake () {
             if (instance != null) {
@@ -69,7 +71,10 @@ namespace AroundTheBend {
         void Update () {
             FictionPointsObject.Update();
             EquipFrameObject.Update();
-            FPText.text = "" + Inventory.instance.FictionPoints;
+            FPText.text = "" + (int)Mathf.Lerp(int.Parse(FPText.text), 
+                Inventory.instance.FictionPoints, 
+                tranSpeed * Time.deltaTime);
+            LVText.text = "" + Inventory.instance.Lives;
         }
 
         public void ShowFP () {
@@ -78,6 +83,15 @@ namespace AroundTheBend {
         
         public void ShowEQ () {
             EquipFrameObject.Show();
+        }
+
+        public void ShowLV () {
+            EquipFrameObject.Show();
+        }
+
+        public void ShowAll () {
+            ShowFP();
+            ShowLV();
         }
     }
 }

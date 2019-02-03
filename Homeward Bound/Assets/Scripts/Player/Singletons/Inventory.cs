@@ -15,6 +15,7 @@ public class Inventory : MonoBehaviour
     public EquipDel EquipEvent;
 
     public int FictionPoints;
+    public int Lives = 5;
 
     private void Awake()
     {

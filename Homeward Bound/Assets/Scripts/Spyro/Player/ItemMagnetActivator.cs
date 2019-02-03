@@ -7,6 +7,10 @@ namespace AroundTheBend {
     public class ItemMagnetActivator : MonoBehaviour {
 
         public static ItemMagnetActivator instance;
+        public float Speed = 3.2f;
+        public float KillRadius = 2f;
+        public float VerticalOffset = -1f;
+
         private SphereCollider col;
 
         public float Radius {

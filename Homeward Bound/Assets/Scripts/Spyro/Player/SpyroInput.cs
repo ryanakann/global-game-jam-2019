@@ -48,6 +48,10 @@ namespace AroundTheBend {
                 body.OpenInventory();
             }
 
+            if (Input.GetButtonDown("Status")) {
+                HUD.instance.ShowAll();
+            }
+
             /*
             if (Input.GetButtonDown("Ragdoll"))
             {
