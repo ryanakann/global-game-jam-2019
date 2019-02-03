@@ -27,6 +27,7 @@ namespace AroundTheBend {
 
         Camera cam;
         public static bool allowMovement = true;
+        public bool lockMainControls;
 
         private void Start () {
             body = GetComponent<SpyroBody>();
@@ -36,29 +37,37 @@ namespace AroundTheBend {
         }
 
         private void Update () {
-            if (Input.GetButtonDown("Use")) {
+            if (Input.GetButtonDown("Pause")) {
 
-            }
-
-            if (Input.GetButtonDown("Interact")) {
-
-            }
-
-            if (Input.GetButtonDown("Inventory")) {
-                body.OpenInventory();
             }
 
             if (Input.GetButtonDown("Status")) {
                 HUD.instance.ShowAll();
             }
+            
+            if (!lockMainControls) {
+                if (Input.GetButtonDown("Use")) {
 
-            /*
-            if (Input.GetButtonDown("Ragdoll"))
-            {
-                //GetComponent<PlayerRagdoll>().ActivateRagdoll(true);
-                DeathMachine.instance.Kill(Vector3.zero);
+                }
+
+                if (Input.GetButtonDown("Interact")) {
+
+                }
+
+                if (Input.GetButtonDown("Inventory")) {
+                    body.OpenInventory();
+                }
+
+                anim.SetBool("Crouch", crouch = Input.GetButton("Crouch"));
+                
+                /*
+                if (Input.GetButtonDown("Ragdoll"))
+                {
+                    //GetComponent<PlayerRagdoll>().ActivateRagdoll(true);
+                    DeathMachine.instance.Kill(Vector3.zero);
+                }
+                */
             }
-            */
         }
 
         private void FixedUpdate () {
@@ -95,8 +104,10 @@ namespace AroundTheBend {
                     Quaternion.LookRotation(desiredMoveDir), desiredRotSpeed);
             }
 
-            controller.Move(Meiji * desiredMoveDir);
+            controller.Move(Meiji * desiredMoveDir * (crouch?crouchMul:1));
         }
+
+        public float crouchMul = 0.45f;
 
         public float damping = 0.0f;
         private void InputMagnitude () {

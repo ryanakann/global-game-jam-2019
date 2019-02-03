@@ -28,7 +28,7 @@ namespace AroundTheBend {
 
         public void Show () {
             Active = true;
-            Anim?.SetBool("Active", Active);
+            if(Anim!=null)Anim.SetBool("Active", Active);
             showTime = CooldownTime;
         }
 
@@ -71,6 +71,8 @@ namespace AroundTheBend {
         void Update () {
             FictionPointsObject.Update();
             EquipFrameObject.Update();
+            LivesObject.Update();
+
             FPText.text = "" + (int)Mathf.Lerp(int.Parse(FPText.text), 
                 Inventory.instance.FictionPoints, 
                 tranSpeed * Time.deltaTime);
@@ -86,7 +88,7 @@ namespace AroundTheBend {
         }
 
         public void ShowLV () {
-            EquipFrameObject.Show();
+            LivesObject.Show();
         }
 
         public void ShowAll () {
